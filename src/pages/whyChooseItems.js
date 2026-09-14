@@ -33,7 +33,7 @@ const whyChooseItems = [
 
 const WhyChooseUs = () => {
   return (
-    <div className="sis-why-choose-us-section py-2">
+    <div className="sis-why-choose-us-section py-2 bgg">
       <div className="container">
         {/* Section Header */}
         <div className="row align-items-end">

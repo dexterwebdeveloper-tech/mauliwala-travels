@@ -270,7 +270,7 @@ const VehicleList = () => {
                                   to="/our-fleet"
                                   className="sis-btn-default"
                                 >
-                                  Rent Now
+                                  Book Now
                                   <i className="fa-solid fa-arrow-right-long"></i>
                                 </Link>
 

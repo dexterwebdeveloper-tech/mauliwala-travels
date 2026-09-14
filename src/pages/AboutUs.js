@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="sis-about-us-section sisf-about-us sisf-section">
+    <div className="sis-about-us-section sisf-about-us sisf-section bgg">
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
