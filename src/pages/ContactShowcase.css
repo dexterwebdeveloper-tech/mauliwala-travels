@@ -1,0 +1,152 @@
+:root{
+  --brand:#1464B2;
+  --bg:#ffffff;
+  --ink:#101113;
+  --muted:#60656d;
+  --ring:#e9eef7;
+}
+
+.contactWrap{
+  padding: 18px 0;
+}
+
+.contactCard{
+  position: relative;
+  border-radius: 18px;
+  padding: 22px;
+  background: radial-gradient(120% 120% at 100% 0%, #f7fbff 0%, #fff 45%);
+  box-shadow: 0 18px 50px rgba(0,0,0,.08);
+}
+
+/* gradient border (unique look) */
+.contactCard::before{
+  content:"";
+  position:absolute; inset:-1px;
+  border-radius:20px;
+  background: linear-gradient(135deg, rgba(20,100,178,.55), rgba(255,153,51,.45), rgba(20,100,178,.55));
+  -webkit-mask: 
+     linear-gradient(#000 0 0) content-box, 
+     linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  padding:1px;
+  pointer-events:none;
+}
+
+.contactHeader{
+  display:flex; align-items:center; gap:12px; justify-content:space-between;
+  margin-bottom: 8px;
+}
+.contactHeader h3{
+  margin:0; font-size: clamp(21px, 2.6vw, 28px); font-weight: 800; color: var(--ink);
+}
+.openBadge{
+  background: #e9f3ff; color: var(--brand);
+  border: 1px solid #cfe3ff; padding: 6px 10px;
+  border-radius: 999px; font-size: 12px; font-weight: 700;
+}
+
+.subText{ color: var(--muted); margin: 8px 0 18px; }
+
+/* two-column grid on desktop */
+.grid{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 22px;
+}
+@media (max-width: 780px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
+.fieldLabel{
+  display:block; font-weight:800; color:#1a1d20; margin-bottom:8px;
+}
+
+.phones{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
+.phoneRow{ display:flex; align-items:center; gap:10px; }
+
+.btnCall{
+  flex: 1;
+  display:flex; align-items:center; gap:10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background:#ffffff;
+  border:1px solid var(--ring);
+  color:#0b62b0; font-weight:800;
+  box-shadow: 0 4px 14px rgba(20,100,178,.08);
+}
+.btnCall:hover{ border-color:#cfe3ff; background:#f7fbff; }
+
+.btnGhost{
+  padding:10px 12px; border-radius:10px;
+  background:#f4f6fb; border:1px solid #e8edf6; color:#2b2f36; font-weight:600;
+}
+.btnGhost:hover{ background:#eef3fb; }
+
+.ctaRow{ display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; }
+.btnWhats{
+  display:flex; align-items:center; gap:8px;
+  padding: 12px 14px; border-radius: 12px; background:#25D366; color:#fff; font-weight:800;
+  box-shadow: 0 8px 24px rgba(37,211,102,.25);
+}
+.btnPrimary{
+  padding: 12px 16px; border-radius:12px; background:var(--brand); color:#fff; font-weight:800;
+  box-shadow: 0 8px 24px rgba(20,100,178,.25);
+}
+
+.emailRow{ display:flex; gap:10px; align-items:center; }
+.emailLink{ font-weight:700; color:#0b62b0; word-break: break-all; }
+
+.bullets{
+  margin:16px 0 0; padding-left:18px; color:#38404a;
+}
+.bullets li{ margin:6px 0; }
+
+
+
+
+:root {
+  --brand-orange: #DD1D22;
+  --brand-yellow: #DD1D22;
+  --brand-red: #DD1D22;
+}
+
+.contactCard::before {
+  background: linear-gradient(135deg, var(--brand-orange), var(--brand-yellow));
+}
+
+.contactHeader h3 {
+  color: var(--brand-red);
+}
+
+.openBadge {
+  background: var(--brand-yellow);
+  color: var(--brand-red);
+  border: none;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, var(--brand-orange), var(--brand-yellow));
+  color: #fff;
+  font-weight: 800;
+  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.35);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+}
+
+.btnGhost {
+  background: #fff7f0;
+  border: 1px solid #ffe1c4;
+  color: var(--brand-orange);
+}
+
+.fieldLabel {
+  color: var(--brand-orange);
+  font-weight: 800;
+}
+
+.emailLink {
+  color: var(--brand-red);
+  font-weight: 700;
+}

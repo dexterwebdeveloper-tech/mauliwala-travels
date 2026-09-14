@@ -1,0 +1,1020 @@
+/*=========================================
+         Services HEADER
+==========================================*/
+
+:root{
+    --primary:#D71920;
+    --primary-dark:#b81319;
+    --secondary:#222222;
+    --white:#ffffff;
+    --light:#f8f9fa;
+    --border:#ececec;
+    --shadow:0 12px 35px rgba(0,0,0,.08);
+    --transition:.35s ease;
+}
+
+/*==============================
+General
+===============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow-x:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.tt-container{
+    width:100%;
+    max-width:1320px;
+    margin:auto;
+    padding:0 20px;
+}
+
+/*==============================
+Top Header
+===============================*/
+
+.tt-topbar{
+    background:linear-gradient(90deg,#111,#2b2b2b);
+    color:#fff;
+    border-bottom:3px solid var(--primary);
+}
+
+.tt-topbar .tt-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:48px;
+}
+
+.tt-left{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    flex-wrap:wrap;
+}
+
+.tt-left a{
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+    transition:var(--transition);
+}
+
+.tt-left a:hover{
+    color:#ffd6d7;
+}
+
+.tt-left i{
+    color:var(--primary);
+    margin-right:8px;
+}
+
+.tt-social{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.tt-social a{
+    width:36px;
+    height:36px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    color:#fff;
+    background:rgba(255,255,255,.08);
+    transition:var(--transition);
+}
+
+.tt-social a:hover{
+    background:var(--primary);
+    transform:translateY(-3px);
+}
+
+/*==============================
+Navigation
+===============================*/
+
+/* .tt-navbar{
+
+    position:sticky;
+    top:0;
+    left:0;
+    width:100%;
+    background:#fff;
+    z-index:999;
+    box-shadow:var(--shadow);
+
+} */
+
+.tt-navbar .tt-container{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:88px;
+
+}
+
+/*==============================
+Logo
+===============================*/
+
+.tt-logo{
+
+    display:flex;
+    align-items:center;
+
+}
+
+.tt-logo img{
+
+    width:220px;
+    height:auto;
+    object-fit:contain;
+    transition:var(--transition);
+
+}
+
+.tt-logo img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*==============================
+Desktop Menu
+===============================*/
+
+.tt-menu{
+
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+}
+
+.tt-menu li{
+
+    position:relative;
+
+}
+
+.tt-menu li a{
+
+    display:block;
+    padding:14px 18px;
+    font-size:16px;
+    font-weight:700;
+    color:#222;
+    border-radius:40px;
+    transition:var(--transition);
+
+}
+
+.tt-menu li a:hover{
+
+    color:var(--primary);
+    background:#fff3f3;
+
+}
+
+/* Animated underline */
+
+.tt-menu li a::after{
+
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:4px;
+    width:0;
+    height:3px;
+    background:var(--primary);
+    border-radius:10px;
+    transform:translateX(-50%);
+    transition:var(--transition);
+
+}
+
+.tt-menu li:hover a::after{
+
+    width:70%;
+
+}
+
+/*==============================
+Right Section
+===============================*/
+
+.tt-right{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+}
+
+/*==============================
+Book Button
+===============================*/
+
+.tt-book-btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 30px;
+    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+    color:#fff;
+    border-radius:50px;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:.5px;
+    transition:var(--transition);
+    box-shadow:0 10px 25px rgba(215,25,32,.25);
+
+}
+
+.tt-book-btn:hover{
+
+    background:#111;
+    color:#fff;
+    transform:translateY(-3px);
+
+}
+
+/*==============================
+Mobile Toggle
+===============================*/
+
+.tt-mobile-btn{
+
+    width:48px;
+    height:48px;
+    border:none;
+    background:var(--primary);
+    color:#fff;
+    border-radius:12px;
+    cursor:pointer;
+    display:none;
+    transition:var(--transition);
+
+}
+
+.tt-mobile-btn i{
+
+    font-size:20px;
+
+}
+
+.tt-mobile-btn:hover{
+
+    background:#111;
+
+}
+
+/*=========================================
+        PART 2B
+ Dropdown + Hover + Sticky + Effects
+==========================================*/
+
+/*==========================
+Dropdown
+===========================*/
+
+.tt-menu li{
+    position:relative;
+}
+
+.tt-menu li ul{
+
+    position:absolute;
+    top:120%;
+    left:0;
+
+    width:270px;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.35s;
+
+    padding:12px 0;
+
+    z-index:999;
+
+}
+
+.tt-menu li:hover > ul{
+
+    opacity:1;
+    visibility:visible;
+
+    top:100%;
+
+}
+
+.tt-menu li ul li{
+
+    width:100%;
+
+}
+
+.tt-menu li ul li a{
+
+    display:block;
+
+    padding:14px 22px;
+
+    color:#222;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    border-radius:0;
+
+}
+
+.tt-menu li ul li a::after{
+
+    display:none;
+
+}
+
+.tt-menu li ul li a:hover{
+
+    background:#D71920;
+
+    color:#fff;
+
+    padding-left:30px;
+
+}
+
+/*==========================
+Second Level Dropdown
+===========================*/
+
+.tt-menu li ul li{
+
+    position:relative;
+
+}
+
+.tt-menu li ul li ul{
+
+    left:105%;
+
+    top:0;
+
+}
+
+.tt-menu li ul li:hover > ul{
+
+    top:0;
+
+}
+
+/*==========================
+Active Menu
+===========================*/
+
+.tt-menu li.active>a{
+
+    color:#D71920;
+
+}
+
+.tt-menu li.active>a::after{
+
+    width:70%;
+
+}
+
+/*==========================
+Navigation Hover
+===========================*/
+
+.tt-menu li{
+
+    overflow:hidden;
+
+}
+
+.tt-menu li a{
+
+    position:relative;
+
+}
+
+.tt-menu li a::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(215,25,32,.08),
+        transparent
+    );
+
+    transition:.55s;
+
+}
+
+.tt-menu li:hover a::before{
+
+    left:100%;
+
+}
+
+/*==========================
+Book Button Animation
+===========================*/
+
+.tt-book-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.tt-book-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(255,255,255,.18);
+
+    transform:skewX(-25deg);
+
+    transition:.5s;
+
+}
+
+.tt-book-btn:hover::before{
+
+    left:120%;
+
+}
+
+/*==========================
+Sticky Navbar
+===========================*/
+
+.tt-navbar{
+
+    transition:.35s;
+
+}
+
+.tt-navbar.sticky{
+
+    min-height:75px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+    animation:slideDown .4s ease;
+
+}
+
+.tt-navbar.sticky .tt-logo img{
+
+    width:190px;
+
+}
+
+/*==========================
+Sticky Animation
+===========================*/
+
+@keyframes slideDown{
+
+0%{
+
+transform:translateY(-100%);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/*==========================
+Logo Hover
+===========================*/
+
+.tt-logo{
+
+    overflow:hidden;
+
+}
+
+.tt-logo img{
+
+    transition:.4s;
+
+}
+
+.tt-logo:hover img{
+
+    transform:scale(1.06);
+
+}
+
+/*==========================
+Topbar Hover
+===========================*/
+
+.tt-left a{
+
+    position:relative;
+
+}
+
+.tt-left a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-4px;
+
+    width:0;
+
+    height:2px;
+
+    background:#D71920;
+
+    transition:.3s;
+
+}
+
+.tt-left a:hover::after{
+
+    width:100%;
+
+}
+
+/*==========================
+Social Icons
+===========================*/
+
+.tt-social a{
+
+    position:relative;
+
+}
+
+.tt-social a::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    border:2px solid transparent;
+
+    transition:.35s;
+
+}
+
+.tt-social a:hover::before{
+
+    border-color:#fff;
+
+}
+
+.tt-social a:hover{
+
+    transform:translateY(-4px) rotate(360deg);
+
+}
+
+/*==========================
+Menu Spacing
+===========================*/
+
+.tt-menu{
+
+    flex-wrap:nowrap;
+
+}
+
+.tt-menu>li{
+
+    margin:0 3px;
+
+}
+
+/*==========================
+Desktop Button Spacing
+===========================*/
+
+.tt-right{
+
+    margin-left:25px;
+
+}
+
+/*==========================
+Smooth Transition
+===========================*/
+
+.tt-header *{
+
+    transition:.3s;
+
+}
+
+/*=========================================
+        PART 2C
+    Mobile Responsive Header
+==========================================*/
+
+/* Hide Mobile Elements */
+
+/* .tt-mobile{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:320px;
+    height:100vh;
+    background:#fff;
+    z-index:99999;
+    overflow-y:auto;
+    transition:.45s ease;
+    box-shadow:-10px 0 35px rgba(0,0,0,.15);
+} */
+
+.tt-mobile.open{
+    right:0;
+}
+
+/* Mobile Header */
+
+.tt-mobile-head{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:#D71920;
+
+}
+
+.tt-mobile-head img{
+
+    width:150px;
+    background:#fff;
+    border-radius:8px;
+    padding:5px;
+
+}
+
+.tt-mobile-head button{
+
+    width:40px;
+    height:40px;
+    border:none;
+    background:#fff;
+    color:#D71920;
+    border-radius:50%;
+    font-size:24px;
+    cursor:pointer;
+
+}
+
+/* Mobile Menu */
+
+.tt-mobile ul{
+
+    padding:20px;
+
+}
+
+.tt-mobile ul li{
+
+    border-bottom:1px solid #eee;
+
+}
+
+.tt-mobile ul li:last-child{
+
+    border:none;
+
+}
+
+.tt-mobile ul li a{
+
+    display:block;
+    padding:15px 0;
+    color:#222;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.tt-mobile ul li a:hover{
+
+    color:#D71920;
+    padding-left:10px;
+
+}
+
+/* Mobile Book Button */
+
+.tt-mobile .tt-book-btn{
+
+    display:block;
+    margin:25px 20px;
+    text-align:center;
+
+}
+
+/*==========================
+Tablet
+==========================*/
+
+@media(max-width:1199px){
+
+.tt-logo img{
+
+    width:190px;
+
+}
+
+.tt-menu li a{
+
+    padding:12px 12px;
+    font-size:15px;
+
+}
+
+.tt-book-btn{
+
+    padding:12px 22px;
+
+}
+
+}
+
+/*==========================
+Laptop
+==========================*/
+
+@media(max-width:991px){
+
+.tt-topbar{
+
+    display:block;
+    display: flex;
+
+}
+
+.tt-navbar .tt-container{
+
+    min-height:75px;
+
+}
+
+.tt-logo img{
+
+    width:170px;
+
+}
+
+.tt-menu{
+
+    display:none;
+
+}
+
+.tt-book-btn{
+
+    display:none;
+
+}
+
+.tt-mobile-btn{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+}
+
+/*==========================
+Mobile
+==========================*/
+
+@media(max-width:767px){
+
+.tt-navbar{
+
+    padding:5px 0;
+
+}
+
+.tt-navbar .tt-container{
+
+    min-height:65px;
+
+}
+
+.tt-logo img{
+
+    width:145px;
+
+}
+
+.tt-mobile{
+
+    width:290px;
+
+}
+
+.tt-mobile ul li a{
+
+    font-size:15px;
+
+}
+
+}
+
+/*==========================
+Small Mobile
+==========================*/
+
+@media(max-width:480px){
+
+.tt-container{
+
+    padding:0 15px;
+
+}
+
+.tt-logo img{
+
+    width:125px;
+
+}
+
+.tt-mobile{
+
+    width:100%;
+
+}
+
+.tt-mobile-head{
+
+    padding:18px;
+
+}
+
+.tt-mobile-head img{
+
+    width:130px;
+
+}
+
+.tt-mobile-head button{
+
+    width:36px;
+    height:36px;
+    font-size:22px;
+
+}
+
+.tt-mobile ul{
+
+    padding:15px;
+
+}
+
+.tt-mobile ul li a{
+
+    padding:14px 0;
+
+}
+
+}
+
+/*==========================
+Overlay
+==========================*/
+
+.tt-overlay{
+
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
+    opacity:0;
+    visibility:hidden;
+    transition:.35s;
+    z-index:9990;
+
+}
+
+.tt-overlay.active{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+/*==========================
+Scrollbar
+==========================*/
+
+.tt-mobile::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.tt-mobile::-webkit-scrollbar-thumb{
+
+    background:#D71920;
+    border-radius:20px;
+
+}
+
+.tt-mobile::-webkit-scrollbar-track{
+
+    background:#f2f2f2;
+
+}
+
+/*==========================
+Hamburger Animation
+==========================*/
+
+.tt-mobile-btn{
+
+    transition:.3s;
+
+}
+
+.tt-mobile-btn:hover{
+
+    transform:rotate(90deg);
+
+}

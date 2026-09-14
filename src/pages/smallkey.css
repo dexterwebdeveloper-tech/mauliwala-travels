@@ -1,0 +1,56 @@
+.box1{
+    /* border:2px solid red; */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #DD1D22;
+    padding-bottom: 10px;
+  }
+  
+  .box1 .b1{
+    /* border:2px solid green; */
+    width:30%;
+    height:60px;
+  }
+  .box1 .b1 img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }
+  
+  .boxes{
+    border: 1px solid;
+  }
+  .box1 .b2{
+    width:80%;
+  }
+  
+  /* .mybox1{
+    border:2px solid red;
+  } */
+  
+  .keyword-img {
+    height:400px;
+  }
+  
+  .keyword-img img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }
+  
+  .contact-section{
+    border:2px solid #268A41;
+    margin-top:40px;
+    padding: 20px;
+  }
+  
+  .keywordsection h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* line-height: 50px; */
+  }
+
+  .b2{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }

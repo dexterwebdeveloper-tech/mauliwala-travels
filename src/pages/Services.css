@@ -1,0 +1,1731 @@
+/* ==========================================================
+   MAULIWALA TRAVELS SERVICES
+========================================================== */
+
+:root {
+  --service-red: #e31e24;
+  --service-deep-red: #b60c14;
+  --service-black: #151516;
+  --service-dark: #242427;
+  --service-grey: #74757b;
+  --service-light: #f6f6f8;
+  --service-white: #ffffff;
+  --service-border: #e8e8eb;
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.mauli-services-hero {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 105px 0 75px;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 82% 25%,
+      rgba(227, 30, 36, 0.27),
+      transparent 25%
+    ),
+    linear-gradient(
+      115deg,
+      #101011 0%,
+      #27272a 55%,
+      #121213 100%
+    );
+}
+
+
+.mauli-services-hero::after {
+  content: "SERVICES";
+
+  position: absolute;
+
+  right: -20px;
+  bottom: -45px;
+
+  color:
+    rgba(255,255,255,0.025);
+
+  font-size:
+    clamp(100px, 16vw, 220px);
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+
+.services-hero-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.circle-one {
+  width: 400px;
+  height: 400px;
+
+  right: -190px;
+  top: -190px;
+
+  border:
+    65px solid rgba(227,30,36,0.08);
+}
+
+
+.circle-two {
+  width: 200px;
+  height: 200px;
+
+  right: 25%;
+  bottom: -130px;
+
+  border:
+    35px solid rgba(255,255,255,0.025);
+}
+
+
+.mauli-services-hero .container {
+  position: relative;
+
+  z-index: 3;
+}
+
+
+.services-hero-content {
+  max-width: 780px;
+}
+
+
+.services-hero-tag {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 22px;
+
+  padding: 9px 17px;
+
+  border-radius: 50px;
+
+  color: #ff7b80;
+
+  background:
+    rgba(227,30,36,0.11);
+
+  border:
+    1px solid rgba(255,93,99,0.18);
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+}
+
+
+.services-hero-content h1 {
+  max-width: 800px;
+
+  margin-bottom: 20px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(45px, 6vw, 75px);
+
+  font-weight: 900;
+
+  line-height: 1.03;
+
+  letter-spacing: -2.8px;
+}
+
+
+.services-hero-content h1 span {
+  display: block;
+
+  color: var(--service-red);
+}
+
+
+.services-hero-content > p {
+  max-width: 660px;
+
+  margin-bottom: 30px;
+
+  color: #b9b9be;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* ==========================================================
+   HERO BUTTONS
+========================================================== */
+
+.services-hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+}
+
+
+.services-primary-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px 25px;
+
+  border-radius: 50px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ef2931,
+      #b70c14
+    );
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  box-shadow:
+    0 12px 27px
+    rgba(227,30,36,0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.services-primary-btn:hover {
+  color: #ffffff;
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 17px 35px
+    rgba(227,30,36,0.35);
+}
+
+
+.services-call-btn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 7px 18px 7px 7px;
+
+  border-radius: 50px;
+
+  color: #ffffff;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid rgba(255,255,255,0.10);
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease;
+}
+
+
+.services-call-btn:hover {
+  color: #ffffff;
+
+  background:
+    rgba(255,255,255,0.10);
+}
+
+
+.services-call-btn > span {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 43px;
+  height: 43px;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  background: var(--service-red);
+}
+
+
+.services-call-btn small {
+  display: block;
+
+  color: #85858b;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+.services-call-btn strong {
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+
+/* ==========================================================
+   HERO STATS
+========================================================== */
+
+.services-hero-stats {
+  display: flex;
+
+  max-width: 690px;
+
+  margin-top: 55px;
+
+  padding-top: 27px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.08);
+}
+
+
+.services-hero-stats > div {
+  min-width: 0;
+
+  flex: 1;
+
+  padding:
+    0 25px;
+
+  border-right:
+    1px solid rgba(255,255,255,0.08);
+}
+
+
+.services-hero-stats > div:first-child {
+  padding-left: 0;
+}
+
+
+.services-hero-stats > div:last-child {
+  border-right: 0;
+}
+
+
+.services-hero-stats strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 900;
+}
+
+
+.services-hero-stats span {
+  color: #77777d;
+
+  font-size: 10px;
+}
+
+
+/* ==========================================================
+   SERVICES SECTION
+========================================================== */
+
+.mauli-services-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 10px 0;
+
+  background:
+    radial-gradient(
+      circle at 0% 35%,
+      rgba(227,30,36,0.055),
+      transparent 20%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f8f8f9
+    );
+}
+
+
+/* ==========================================================
+   SECTION HEADING
+========================================================== */
+
+.services-heading {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  margin-bottom: 50px;
+}
+
+
+.services-small-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 10px;
+
+  color: var(--service-red);
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.services-red-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background:
+    var(--service-red);
+
+  box-shadow:
+    0 0 0 5px
+    rgba(227,30,36,0.08);
+}
+
+
+.services-heading h2 {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: var(--service-black);
+
+  font-size:
+    clamp(36px, 4.5vw, 52px);
+
+  font-weight: 900;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.8px;
+}
+
+
+.services-heading h2 span {
+  color: var(--service-red);
+}
+
+
+.services-heading-right {
+  max-width: 450px;
+}
+
+
+.services-heading-right p {
+  margin: 0;
+
+  color: var(--service-grey);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+.services-heading-decoration {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 5px;
+
+  margin-top: 17px;
+}
+
+
+.services-heading-decoration span:first-child {
+  width: 65px;
+  height: 4px;
+
+  border-radius: 20px;
+
+  background:
+    var(--service-red);
+}
+
+
+.services-heading-decoration span:last-child {
+  width: 20px;
+  height: 4px;
+
+  border-radius: 20px;
+
+  background:
+    var(--service-black);
+}
+
+
+/* ==========================================================
+   COMMON SERVICE CARD
+========================================================== */
+
+.mauli-service-card {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+
+  min-height: 365px;
+
+  overflow: hidden;
+
+  padding: 28px;
+
+  border-radius: 25px;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.mauli-service-card:hover {
+  transform:
+    translateY(-8px);
+}
+
+
+.service-number {
+  position: absolute;
+
+  right: 20px;
+  top: 15px;
+
+  font-size: 58px;
+  font-weight: 900;
+
+  line-height: 1;
+
+  opacity: 0.07;
+}
+
+
+/* ==========================================================
+   CARD TOP
+========================================================== */
+
+.service-card-top {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 27px;
+}
+
+
+.service-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 62px;
+  height: 62px;
+
+  flex-shrink: 0;
+
+  border-radius: 18px;
+
+  font-size: 21px;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+.mauli-service-card:hover
+.service-icon {
+  transform:
+    rotate(-7deg)
+    scale(1.07);
+}
+
+
+.service-tag {
+  padding:
+    6px 10px;
+
+  border-radius: 30px;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.service-card-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.service-card-content h3 {
+  margin-bottom: 13px;
+
+  font-size: 23px;
+  font-weight: 900;
+
+  line-height: 1.25;
+}
+
+
+.service-card-content p {
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* ==========================================================
+   BOTTOM
+========================================================== */
+
+.service-card-bottom {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: auto;
+
+  padding-top: 25px;
+}
+
+
+.service-explore-link {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 17px;
+
+  text-decoration: none;
+
+  border-top:
+    1px solid;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+.service-explore-link > span {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 33px;
+  height: 33px;
+
+  border-radius: 50%;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.mauli-service-card:hover
+.service-explore-link > span {
+  transform:
+    translateX(4px);
+}
+
+
+/* ==========================================================
+   RED CARD
+========================================================== */
+
+.service-red {
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255,255,255,0.15),
+      transparent 25%
+    ),
+    linear-gradient(
+      145deg,
+      #ef2931,
+      #d8171f 55%,
+      #ad0b13
+    );
+
+  box-shadow:
+    0 18px 40px
+    rgba(227,30,36,0.17);
+}
+
+
+.service-red h3,
+.service-red .service-explore-link {
+  color: #ffffff;
+}
+
+
+.service-red p {
+  color: #ffdadd;
+}
+
+
+.service-red .service-icon {
+  color: var(--service-red);
+
+  background: #ffffff;
+}
+
+
+.service-red .service-tag {
+  color: #ffffff;
+
+  background:
+    rgba(255,255,255,0.13);
+}
+
+
+.service-red
+.service-explore-link {
+  border-top-color:
+    rgba(255,255,255,0.16);
+}
+
+
+.service-red
+.service-explore-link > span {
+  color: var(--service-red);
+
+  background: #ffffff;
+}
+
+
+/* ==========================================================
+   DARK CARD
+========================================================== */
+
+.service-dark {
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(227,30,36,0.20),
+      transparent 27%
+    ),
+    linear-gradient(
+      145deg,
+      #323236,
+      #171719
+    );
+
+  box-shadow:
+    0 18px 40px
+    rgba(0,0,0,0.12);
+}
+
+
+.service-dark h3,
+.service-dark .service-explore-link {
+  color: #ffffff;
+}
+
+
+.service-dark p {
+  color: #b9b9bf;
+}
+
+
+.service-dark .service-icon {
+  color: #ffffff;
+
+  background:
+    var(--service-red);
+}
+
+
+.service-dark .service-tag {
+  color: #ff7a80;
+
+  background:
+    rgba(227,30,36,0.12);
+}
+
+
+.service-dark
+.service-explore-link {
+  border-top-color:
+    rgba(255,255,255,0.10);
+}
+
+
+.service-dark
+.service-explore-link > span {
+  color: #ffffff;
+
+  background:
+    var(--service-red);
+}
+
+
+/* ==========================================================
+   LIGHT CARD
+========================================================== */
+
+.service-light {
+  color:
+    var(--service-black);
+
+  background:
+    #f1f1f3;
+
+  border:
+    1px solid #e8e8eb;
+}
+
+
+.service-light p {
+  color:
+    var(--service-grey);
+}
+
+
+.service-light
+.service-icon {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2e2e31,
+      #151516
+    );
+}
+
+
+.service-light
+.service-tag {
+  color:
+    var(--service-red);
+
+  background:
+    #ffe7e9;
+}
+
+
+.service-light
+.service-explore-link {
+  color:
+    var(--service-black);
+
+  border-top-color:
+    #dddddf;
+}
+
+
+.service-light
+.service-explore-link > span {
+  color: #ffffff;
+
+  background:
+    var(--service-black);
+}
+
+
+/* ==========================================================
+   WHITE CARD
+========================================================== */
+
+.service-white {
+  color:
+    var(--service-black);
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid #e6e6e9;
+
+  box-shadow:
+    0 15px 35px
+    rgba(20,20,25,0.07);
+}
+
+
+.service-white:hover {
+  box-shadow:
+    0 23px 45px
+    rgba(20,20,25,0.12);
+}
+
+
+.service-white p {
+  color:
+    var(--service-grey);
+}
+
+
+.service-white
+.service-icon {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ef2931,
+      #b70c14
+    );
+
+  box-shadow:
+    0 9px 20px
+    rgba(227,30,36,0.18);
+}
+
+
+.service-white
+.service-tag {
+  color:
+    var(--service-red);
+
+  background:
+    #fff0f1;
+}
+
+
+.service-white
+.service-explore-link {
+  color:
+    var(--service-black);
+
+  border-top-color:
+    #eeeeef;
+}
+
+
+.service-white
+.service-explore-link > span {
+  color: #ffffff;
+
+  background:
+    var(--service-red);
+}
+
+
+/* ==========================================================
+   SOFT RED
+========================================================== */
+
+.service-red-soft {
+  color:
+    var(--service-black);
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff5f5,
+      #ffe8e9
+    );
+
+  border:
+    1px solid
+    rgba(227,30,36,0.12);
+}
+
+
+.service-red-soft p {
+  color:
+    #77777c;
+}
+
+
+.service-red-soft
+.service-icon {
+  color: #ffffff;
+
+  background:
+    var(--service-red);
+}
+
+
+.service-red-soft
+.service-tag {
+  color:
+    #ffffff;
+
+  background:
+    var(--service-red);
+}
+
+
+.service-red-soft
+.service-explore-link {
+  color:
+    var(--service-red);
+
+  border-top-color:
+    rgba(227,30,36,0.13);
+}
+
+
+.service-red-soft
+.service-explore-link > span {
+  color: #ffffff;
+
+  background:
+    var(--service-red);
+}
+
+
+/* ==========================================================
+   BLACK RED
+========================================================== */
+
+.service-black-red {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #161617 0%,
+      #28282b 60%,
+      #8f0a10 145%
+    );
+}
+
+
+.service-black-red h3,
+.service-black-red
+.service-explore-link {
+  color: #ffffff;
+}
+
+
+.service-black-red p {
+  color: #b9b9be;
+}
+
+
+.service-black-red
+.service-icon {
+  color:
+    var(--service-red);
+
+  background:
+    #ffffff;
+}
+
+
+.service-black-red
+.service-tag {
+  color:
+    #ff6d73;
+
+  background:
+    rgba(227,30,36,0.12);
+}
+
+
+.service-black-red
+.service-explore-link {
+  border-top-color:
+    rgba(255,255,255,0.10);
+}
+
+
+.service-black-red
+.service-explore-link > span {
+  color: #ffffff;
+
+  background:
+    var(--service-red);
+}
+
+
+/* ==========================================================
+   BENEFITS
+========================================================== */
+
+.service-benefits-section {
+  padding:
+    0 0 100px;
+
+  background:
+    #f8f8f9;
+}
+
+
+.service-benefits-wrapper {
+  padding:
+    42px;
+
+  border-radius:
+    28px;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid #e8e8eb;
+
+  box-shadow:
+    0 20px 50px
+    rgba(20,20,25,0.07);
+}
+
+
+.benefits-heading {
+  margin-bottom:
+    30px;
+}
+
+
+.benefits-heading > span {
+  color:
+    var(--service-red);
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    1.7px;
+}
+
+
+.benefits-heading h2 {
+  margin:
+    6px 0 0;
+
+  color:
+    var(--service-black);
+
+  font-size:
+    30px;
+
+  font-weight:
+    900;
+}
+
+
+.benefits-heading h2 strong {
+  color:
+    var(--service-red);
+}
+
+
+.benefits-grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:
+    20px;
+}
+
+
+.service-benefit {
+  display:
+    flex;
+
+  gap:
+    14px;
+
+  padding:
+    20px;
+
+  border-radius:
+    17px;
+
+  background:
+    #f7f7f8;
+}
+
+
+.benefit-icon {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width:
+    47px;
+
+  height:
+    47px;
+
+  flex-shrink:
+    0;
+
+  border-radius:
+    14px;
+
+  color:
+    #ffffff;
+
+  background:
+    var(--service-red);
+}
+
+
+.service-benefit h4 {
+  margin:
+    0 0 5px;
+
+  color:
+    #222;
+
+  font-size:
+    14px;
+
+  font-weight:
+    800;
+}
+
+
+.service-benefit p {
+  margin:
+    0;
+
+  color:
+    #77777c;
+
+  font-size:
+    11px;
+
+  line-height:
+    1.6;
+}
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.services-cta-section {
+  padding:
+    0 0 100px;
+
+  background:
+    #f8f8f9;
+}
+
+
+.services-cta {
+  position:
+    relative;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    35px;
+
+  overflow:
+    hidden;
+
+  padding:
+    50px;
+
+  border-radius:
+    30px;
+
+  color:
+    #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(227,30,36,0.26),
+      transparent 25%
+    ),
+    linear-gradient(
+      125deg,
+      #151516,
+      #29292c
+    );
+
+  box-shadow:
+    0 25px 55px
+    rgba(20,20,25,0.15);
+}
+
+
+.cta-watermark {
+  position:
+    absolute;
+
+  right:
+    10px;
+
+  bottom:
+    -28px;
+
+  color:
+    rgba(255,255,255,0.025);
+
+  font-size:
+    105px;
+
+  font-weight:
+    900;
+
+  line-height:
+    1;
+}
+
+
+.services-cta-content {
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  max-width:
+    600px;
+}
+
+
+.services-cta-content > span {
+  color:
+    #ff686e;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    1.8px;
+}
+
+
+.services-cta-content h2 {
+  margin:
+    8px 0 10px;
+
+  color:
+    #ffffff;
+
+  font-size:
+    34px;
+
+  font-weight:
+    900;
+
+  line-height:
+    1.2;
+}
+
+
+.services-cta-content h2 strong {
+  color:
+    var(--service-red);
+}
+
+
+.services-cta-content p {
+  margin:
+    0;
+
+  color:
+    #a3a3a9;
+
+  font-size:
+    13px;
+}
+
+
+.services-cta-actions {
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    10px;
+
+  min-width:
+    225px;
+}
+
+
+.cta-call-button {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    11px;
+
+  padding:
+    11px 16px;
+
+  border-radius:
+    14px;
+
+  color:
+    #ffffff;
+
+  background:
+    var(--service-red);
+
+  text-decoration:
+    none;
+}
+
+
+.cta-call-button:hover {
+  color:
+    #ffffff;
+}
+
+
+.cta-call-button > i {
+  font-size:
+    17px;
+}
+
+
+.cta-call-button small {
+  display:
+    block;
+
+  color:
+    #ffd3d5;
+
+  font-size:
+    7px;
+
+  font-weight:
+    800;
+}
+
+
+.cta-call-button strong {
+  font-size:
+    12px;
+}
+
+
+.cta-enquiry-button {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  padding:
+    13px 17px;
+
+  border-radius:
+    14px;
+
+  color:
+    #ffffff;
+
+  background:
+    rgba(255,255,255,0.07);
+
+  border:
+    1px solid rgba(255,255,255,0.10);
+
+  text-decoration:
+    none;
+
+  font-size:
+    11px;
+
+  font-weight:
+    800;
+}
+
+
+.cta-enquiry-button:hover {
+  color:
+    #ffffff;
+
+  background:
+    rgba(255,255,255,0.11);
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 991px) {
+
+  .services-heading {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+
+    gap:
+      20px;
+  }
+
+
+  .services-heading-decoration {
+    justify-content:
+      flex-start;
+  }
+
+
+  .benefits-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .services-cta {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+  }
+
+
+  .services-cta-actions {
+    width:
+      100%;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+
+  .mauli-services-hero {
+    padding:
+      75px 0 60px;
+  }
+
+
+  .services-hero-content h1 {
+    font-size:
+      43px;
+
+    letter-spacing:
+      -1.7px;
+  }
+
+
+  .services-hero-stats {
+    flex-direction:
+      column;
+
+    gap:
+      15px;
+  }
+
+
+  .services-hero-stats > div {
+    padding:
+      0 0 15px;
+
+    border-right:
+      0;
+
+    border-bottom:
+      1px solid rgba(255,255,255,0.08);
+  }
+
+
+  .services-hero-stats > div:last-child {
+    border-bottom:
+      0;
+  }
+
+
+  .mauli-services-section {
+    padding:
+      70px 0;
+  }
+
+
+  .services-heading h2 {
+    font-size:
+      37px;
+  }
+
+
+  .mauli-service-card {
+    min-height:
+      345px;
+
+    padding:
+      25px;
+
+    border-radius:
+      21px;
+  }
+
+
+  .service-benefits-wrapper {
+    padding:
+      28px 20px;
+  }
+
+
+  .services-cta {
+    padding:
+      35px 23px;
+
+    border-radius:
+      23px;
+  }
+
+
+  .services-cta-content h2 {
+    font-size:
+      28px;
+  }
+
+
+  .service-benefits-section,
+  .services-cta-section {
+    padding-bottom:
+      70px;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .services-hero-actions {
+    align-items:
+      stretch;
+
+    flex-direction:
+      column;
+  }
+
+
+  .services-primary-btn {
+    justify-content:
+      center;
+  }
+
+
+  .services-call-btn {
+    width:
+      100%;
+  }
+
+
+  .service-card-content h3 {
+    font-size:
+      21px;
+  }
+
+}

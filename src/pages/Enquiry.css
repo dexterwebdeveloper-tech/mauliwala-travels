@@ -1,0 +1,1130 @@
+/* ==========================================================
+   MAULIWALA TRAVELS
+   PREMIUM COLORFUL ENQUIRY UI
+========================================================== */
+
+:root {
+  --red: #e51b23;
+  --deep-red: #b90d16;
+  --coral: #ff525d;
+
+  --orange: #ff7a18;
+  --gold: #ffb800;
+
+  --black: #141414;
+  --dark: #222326;
+  --graphite: #303136;
+
+  --blue: #2563eb;
+  --sky: #eaf3ff;
+
+  --green: #10a66a;
+  --green-soft: #eafaf3;
+
+  --purple: #7257e8;
+  --purple-soft: #f2efff;
+
+  --white: #ffffff;
+  --soft: #f7f8fb;
+  --border: #e7e8ed;
+
+  --text: #22242a;
+  --muted: #737780;
+}
+
+
+/* ==========================================================
+   PAGE BANNER
+========================================================== */
+
+.page-banner {
+  position: relative;
+  overflow: hidden;
+
+  padding: 85px 20px 105px;
+
+  background:
+    radial-gradient(
+      circle at 10% 25%,
+      rgba(255, 184, 0, 0.18),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 87% 25%,
+      rgba(229, 27, 35, 0.15),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 75% 100%,
+      rgba(37, 99, 235, 0.10),
+      transparent 27%
+    ),
+    linear-gradient(
+      120deg,
+      #fff8f4 0%,
+      #ffffff 42%,
+      #f7f5ff 72%,
+      #fff4f4 100%
+    );
+}
+
+
+/* large decorative ring */
+
+.page-banner::before {
+  content: "";
+
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  right: -100px;
+  top: -150px;
+
+  border-radius: 50%;
+
+  border: 55px solid rgba(229, 27, 35, 0.055);
+}
+
+
+/* bottom wave effect */
+
+.page-banner::after {
+  content: "";
+
+  position: absolute;
+
+  width: 120%;
+  height: 80px;
+
+  bottom: -45px;
+  left: -10%;
+
+  background: #ffffff;
+
+  border-radius: 50% 50% 0 0;
+}
+
+
+.page-banner-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1150px;
+  margin: auto;
+
+  text-align: center;
+}
+
+
+.page-banner h2 {
+  display: inline-block;
+
+  position: relative;
+
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 60px);
+
+  font-weight: 900;
+
+  letter-spacing: -2px;
+
+  color: var(--black);
+}
+
+
+/* colorful text underline */
+
+.page-banner h2::after {
+  content: "";
+
+  display: block;
+
+  width: 105px;
+  height: 7px;
+
+  margin: 18px auto 0;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--red),
+      var(--orange),
+      var(--gold)
+    );
+}
+
+
+/* ==========================================================
+   ENQUIRY SECTION
+========================================================== */
+
+.enquiry-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-top: 45px !important;
+  padding-bottom: 100px !important;
+
+  background:
+    radial-gradient(
+      circle at 0% 30%,
+      rgba(37, 99, 235, 0.07),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 100% 70%,
+      rgba(229, 27, 35, 0.07),
+      transparent 25%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f8f9fc
+    );
+}
+
+
+/* LEFT COLOR CIRCLE */
+
+.enquiry-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  left: -210px;
+  top: 270px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(37, 99, 235, 0.12),
+      rgba(114, 87, 232, 0.07)
+    );
+}
+
+
+/* RIGHT CIRCLE */
+
+.enquiry-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  right: -230px;
+  bottom: 80px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 184, 0, 0.10),
+      rgba(229, 27, 35, 0.08)
+    );
+}
+
+
+.enquiry-section .container {
+  position: relative;
+  z-index: 5;
+}
+
+
+/* ==========================================================
+   MAIN CARD
+========================================================== */
+
+.enquiry-box {
+  position: relative;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 0 55px 55px;
+
+  overflow: hidden;
+
+  border-radius: 34px;
+
+  background:
+    rgba(255, 255, 255, 0.97);
+
+  border:
+    1px solid rgba(20, 20, 20, 0.07);
+
+  box-shadow:
+    0 35px 80px rgba(27, 31, 43, 0.13);
+}
+
+
+/* TOP COLORFUL BAR */
+
+.enquiry-box::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: 0;
+
+  height: 8px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--red) 0%,
+      var(--coral) 20%,
+      var(--orange) 38%,
+      var(--gold) 52%,
+      var(--purple) 70%,
+      var(--blue) 87%,
+      var(--red) 100%
+    );
+}
+
+
+/* ==========================================================
+   FORM HEADER
+========================================================== */
+
+.enquiry-box > .text-center {
+  position: relative;
+
+  margin-left: -55px;
+  margin-right: -55px;
+
+  padding:
+    52px
+    45px
+    42px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 20%,
+      rgba(255, 184, 0, 0.16),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(229, 27, 35, 0.16),
+      transparent 25%
+    ),
+    linear-gradient(
+      120deg,
+      #19191b,
+      #292a2f 55%,
+      #18181a
+    );
+}
+
+
+/* header decorative circle */
+
+.enquiry-box > .text-center::before {
+  content: "";
+
+  position: absolute;
+
+  width: 210px;
+  height: 210px;
+
+  right: -75px;
+  bottom: -120px;
+
+  border-radius: 50%;
+
+  border:
+    32px solid rgba(255, 255, 255, 0.035);
+}
+
+
+/* header decorative line */
+
+.enquiry-box > .text-center::after {
+  content: "";
+
+  position: absolute;
+
+  width: 170px;
+  height: 5px;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 0 0 20px 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--red),
+      var(--orange),
+      var(--gold)
+    );
+}
+
+
+.enquiry-box .small-title {
+  position: relative;
+  z-index: 2;
+
+  display: inline-block;
+
+  padding:
+    9px
+    20px;
+
+  margin-bottom:
+    16px;
+
+  border-radius:
+    30px;
+
+  background:
+    rgba(255, 255, 255, 0.09);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.14);
+
+  color:
+    #ffd0d2 !important;
+
+  font-size:
+    12px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    2.3px;
+}
+
+
+.enquiry-box > .text-center h2 {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom:
+    13px;
+
+  color:
+    #ffffff !important;
+
+  font-size:
+    clamp(30px, 4vw, 43px);
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    -1.2px;
+}
+
+
+.enquiry-box > .text-center p {
+  position: relative;
+  z-index: 2;
+
+  max-width:
+    670px;
+
+  margin:
+    auto;
+
+  color:
+    #d5d6da !important;
+
+  font-size:
+    15.5px;
+
+  line-height:
+    1.8;
+}
+
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+.enquiry-box form {
+  position: relative;
+
+  padding-top:
+    8px;
+}
+
+
+/* ==========================================================
+   FIELD CARDS
+========================================================== */
+
+.enquiry-box .col-lg-6,
+.enquiry-box .col-12 {
+  position: relative;
+}
+
+
+/* ==========================================================
+   INPUT BASE
+========================================================== */
+
+.enquiry-box .form-control,
+.enquiry-box .form-select {
+  min-height:
+    61px;
+
+  padding:
+    15px
+    18px;
+
+  border-radius:
+    15px;
+
+  border:
+    1px solid var(--border);
+
+  background:
+    #ffffff;
+
+  color:
+    var(--text);
+
+  font-size:
+    15px;
+
+  font-weight:
+    600;
+
+  box-shadow:
+    0 7px 22px rgba(25, 30, 45, 0.055);
+
+  transition:
+    all 0.28s ease;
+}
+
+
+.enquiry-box .form-control::placeholder {
+  color:
+    #969aa3;
+
+  font-weight:
+    500;
+}
+
+
+/* ==========================================================
+   DIFFERENT COLOR INPUTS
+   Gives every row some personality
+========================================================== */
+
+
+/* Name */
+
+.enquiry-box .row > div:nth-child(1) .form-control {
+  background:
+    linear-gradient(
+      90deg,
+      #fff7f7,
+      #ffffff
+    );
+
+  border-left:
+    4px solid var(--red);
+}
+
+
+/* Email */
+
+.enquiry-box .row > div:nth-child(2) .form-control {
+  background:
+    linear-gradient(
+      90deg,
+      #f2f7ff,
+      #ffffff
+    );
+
+  border-left:
+    4px solid var(--blue);
+}
+
+
+/* Phone */
+
+.enquiry-box .row > div:nth-child(3) .form-control {
+  background:
+    linear-gradient(
+      90deg,
+      #effcf6,
+      #ffffff
+    );
+
+  border-left:
+    4px solid var(--green);
+}
+
+
+/* Vehicle */
+
+.enquiry-box .row > div:nth-child(4) .form-select {
+  background-color:
+    #fffaf0;
+
+  border-left:
+    4px solid var(--orange);
+}
+
+
+/* Pickup */
+
+.enquiry-box .row > div:nth-child(5) .form-control {
+  background:
+    linear-gradient(
+      90deg,
+      #f4f1ff,
+      #ffffff
+    );
+
+  border-left:
+    4px solid var(--purple);
+}
+
+
+/* Drop */
+
+.enquiry-box .row > div:nth-child(6) .form-control {
+  background:
+    linear-gradient(
+      90deg,
+      #fff3f3,
+      #ffffff
+    );
+
+  border-left:
+    4px solid var(--coral);
+}
+
+
+/* Trip */
+
+.enquiry-box .row > div:nth-child(7) .form-select {
+  background-color:
+    #eef8ff;
+
+  border-left:
+    4px solid #1e9ad7;
+}
+
+
+/* Passenger */
+
+.enquiry-box .row > div:nth-child(8) .form-select {
+  background-color:
+    #fff9e9;
+
+  border-left:
+    4px solid var(--gold);
+}
+
+
+/* Date */
+
+.enquiry-box .row > div:nth-child(9) .form-control {
+  background:
+    linear-gradient(
+      90deg,
+      #f1faf6,
+      #ffffff
+    );
+
+  border-left:
+    4px solid var(--green);
+}
+
+
+/* Time */
+
+.enquiry-box .row > div:nth-child(10) .form-control {
+  background:
+    linear-gradient(
+      90deg,
+      #f5f2ff,
+      #ffffff
+    );
+
+  border-left:
+    4px solid var(--purple);
+}
+
+
+/* ==========================================================
+   INPUT HOVER
+========================================================== */
+
+.enquiry-box .form-control:hover,
+.enquiry-box .form-select:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    #cfd1d7;
+
+  box-shadow:
+    0 11px 25px rgba(20, 25, 40, 0.09);
+}
+
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+.enquiry-box .form-control:focus,
+.enquiry-box .form-select:focus {
+  outline:
+    none;
+
+  background:
+    #ffffff;
+
+  border-color:
+    var(--red);
+
+  box-shadow:
+    0 0 0 4px rgba(229, 27, 35, 0.09),
+    0 12px 28px rgba(20, 25, 40, 0.09);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* ==========================================================
+   SELECT
+========================================================== */
+
+.enquiry-box .form-select {
+  cursor:
+    pointer;
+}
+
+
+.enquiry-box .form-select option {
+  background:
+    #ffffff;
+
+  color:
+    #222;
+}
+
+
+/* ==========================================================
+   TEXTAREA SPECIAL DESIGN
+========================================================== */
+
+.enquiry-box textarea.form-control {
+  min-height:
+    150px;
+
+  resize:
+    vertical;
+
+  line-height:
+    1.7;
+
+  background:
+    linear-gradient(
+      110deg,
+      #fff7f7 0%,
+      #fffaf1 33%,
+      #f5f3ff 67%,
+      #f2f8ff 100%
+    );
+
+  border:
+    1px solid #e2e2e8;
+
+  border-left:
+    4px solid var(--red);
+}
+
+
+/* ==========================================================
+   DATE TIME
+========================================================== */
+
+.enquiry-box input[type="date"],
+.enquiry-box input[type="time"] {
+  cursor:
+    pointer;
+}
+
+
+.enquiry-box input[type="date"]::-webkit-calendar-picker-indicator,
+.enquiry-box input[type="time"]::-webkit-calendar-picker-indicator {
+  cursor:
+    pointer;
+
+  opacity:
+    0.7;
+}
+
+
+/* ==========================================================
+   BUTTON AREA
+========================================================== */
+
+.enquiry-box .col-12.text-center {
+  padding-top:
+    8px;
+}
+
+
+/* ==========================================================
+   PREMIUM COLOR BUTTON
+========================================================== */
+
+.enquiry-box .btn-danger {
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  min-width:
+    310px;
+
+  padding:
+    17px 35px !important;
+
+  border:
+    0 !important;
+
+  border-radius:
+    50px !important;
+
+  color:
+    #ffffff;
+
+  background:
+    linear-gradient(
+      105deg,
+      #b90d16 0%,
+      #e51b23 32%,
+      #f44436 60%,
+      #ff7a18 100%
+    ) !important;
+
+  font-size:
+    15px;
+
+  font-weight:
+    800 !important;
+
+  letter-spacing:
+    0.4px;
+
+  box-shadow:
+    0 14px 32px rgba(229, 27, 35, 0.28),
+    0 5px 12px rgba(255, 122, 24, 0.12);
+
+  transition:
+    all 0.3s ease;
+}
+
+
+/* shine */
+
+.enquiry-box .btn-danger::before {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  width:
+    60px;
+
+  height:
+    180%;
+
+  top:
+    -40%;
+
+  left:
+    -100px;
+
+  transform:
+    rotate(25deg);
+
+  background:
+    rgba(255, 255, 255, 0.28);
+
+  filter:
+    blur(4px);
+
+  transition:
+    left 0.65s ease;
+}
+
+
+.enquiry-box .btn-danger:hover {
+  transform:
+    translateY(-4px)
+    scale(1.015);
+
+  box-shadow:
+    0 19px 38px rgba(229, 27, 35, 0.34),
+    0 8px 18px rgba(255, 122, 24, 0.16);
+}
+
+
+.enquiry-box .btn-danger:hover::before {
+  left:
+    120%;
+}
+
+
+.enquiry-box .btn-danger:active {
+  transform:
+    translateY(-1px);
+}
+
+
+/* ==========================================================
+   ALERTS
+========================================================== */
+
+.enquiry-box .alert {
+  max-width:
+    800px;
+
+  margin:
+    8px auto 0;
+
+  padding:
+    18px 22px;
+
+  border-radius:
+    15px !important;
+
+  font-size:
+    14px;
+
+  font-weight:
+    600;
+
+  line-height:
+    1.65;
+
+  box-shadow:
+    0 9px 24px rgba(20, 25, 40, 0.06);
+}
+
+
+.enquiry-box .alert-success {
+  color:
+    #087346;
+
+  background:
+    linear-gradient(
+      90deg,
+      #e9fbf2,
+      #f7fffb
+    );
+
+  border:
+    1px solid #bdebd4;
+
+  border-left:
+    5px solid var(--green);
+}
+
+
+.enquiry-box .alert-danger {
+  color:
+    #a11118;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fff0f1,
+      #fff9f9
+    );
+
+  border:
+    1px solid #f3c7c9;
+
+  border-left:
+    5px solid var(--red);
+}
+
+
+/* ==========================================================
+   FORM SPACING
+========================================================== */
+
+.enquiry-box .row {
+  --bs-gutter-x:
+    1.5rem;
+}
+
+
+/* ==========================================================
+   RESPONSIVE TABLET
+========================================================== */
+
+@media (max-width: 991px) {
+
+  .page-banner {
+    padding:
+      65px 20px 85px;
+  }
+
+
+  .enquiry-section {
+    padding-top:
+      35px !important;
+
+    padding-bottom:
+      70px !important;
+  }
+
+
+  .enquiry-box {
+    padding:
+      0 30px 40px;
+
+    border-radius:
+      27px;
+  }
+
+
+  .enquiry-box > .text-center {
+    margin-left:
+      -30px;
+
+    margin-right:
+      -30px;
+
+    padding:
+      45px 30px 38px;
+  }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 576px) {
+
+  .page-banner {
+    padding:
+      48px 15px 70px;
+  }
+
+
+  .page-banner h2 {
+    font-size:
+      32px;
+
+    letter-spacing:
+      -1px;
+  }
+
+
+  .enquiry-section {
+    padding:
+      20px 3px 55px !important;
+  }
+
+
+  .enquiry-box {
+    padding:
+      0 16px 30px;
+
+    border-radius:
+      22px;
+  }
+
+
+  .enquiry-box > .text-center {
+    margin-left:
+      -16px;
+
+    margin-right:
+      -16px;
+
+    padding:
+      38px 20px 32px;
+  }
+
+
+  .enquiry-box > .text-center h2 {
+    font-size:
+      28px;
+  }
+
+
+  .enquiry-box > .text-center p {
+    font-size:
+      14px;
+
+    line-height:
+      1.7;
+  }
+
+
+  .enquiry-box .form-control,
+  .enquiry-box .form-select {
+    min-height:
+      56px;
+
+    padding:
+      13px 15px;
+
+    border-radius:
+      13px;
+
+    font-size:
+      14px;
+  }
+
+
+  .enquiry-box textarea.form-control {
+    min-height:
+      135px;
+  }
+
+
+  .enquiry-box .btn-danger {
+    width:
+      100%;
+
+    min-width:
+      0;
+
+    padding:
+      16px 18px !important;
+  }
+
+}

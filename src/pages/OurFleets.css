@@ -1,0 +1,663 @@
+/* =========================================================
+   MAULIWALA TRAVELS - OUR FLEETS
+========================================================= */
+
+.mf-fleet-section {
+  position: relative;
+  overflow: hidden;
+
+  padding: 15px 0;
+
+  background:
+    radial-gradient(
+      circle at 0% 10%,
+      rgba(227, 30, 36, 0.09),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 100% 85%,
+      rgba(255, 145, 30, 0.09),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #f5f5f7,
+      #fff4f4 50%,
+      #fff9f0
+    );
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.mf-fleet-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 40px;
+}
+
+
+.mf-fleet-kicker {
+  display: inline-flex;
+
+  margin-bottom: 12px;
+
+  padding: 7px 13px;
+
+  border-radius: 30px;
+
+  color: #e31e24;
+
+  background:
+    rgba(227, 30, 36, 0.09);
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+
+.mf-fleet-head h2 {
+  margin: 0 0 10px;
+
+  color: #18181a;
+
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 900;
+
+  line-height: 1.15;
+}
+
+
+.mf-fleet-head h2 span {
+  color: #e31e24;
+}
+
+
+.mf-fleet-head p {
+  max-width: 680px;
+
+  margin: 0;
+
+  color: #696970;
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+
+/* Header badge */
+
+.mf-fleet-head-badge {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex: 0 0 auto;
+
+  padding: 13px 17px;
+
+  border-radius: 15px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #303034,
+      #171719
+    );
+
+  box-shadow:
+    0 12px 28px rgba(20, 20, 25, 0.13);
+}
+
+
+.mf-fleet-head-badge > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 11px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f12b33,
+      #b80d15
+    );
+}
+
+
+.mf-fleet-head-badge div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.mf-fleet-head-badge strong {
+  font-size: 11px;
+  font-weight: 900;
+}
+
+
+.mf-fleet-head-badge span {
+  margin-top: 2px;
+
+  color: #aaaab0;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.mf-fleet-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 23px;
+
+  border: 1px solid rgba(20, 20, 22, 0.07);
+
+  box-shadow:
+    0 12px 32px rgba(20, 20, 25, 0.08);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.mf-fleet-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 22px 45px rgba(20, 20, 25, 0.15);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.mf-fleet-image {
+  position: relative;
+
+  width: 100%;
+  height: 235px;
+
+  overflow: hidden;
+
+  background: #eeeeef;
+}
+
+
+.mf-fleet-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.6s ease;
+}
+
+
+.mf-fleet-card:hover
+.mf-fleet-image img {
+  transform: scale(1.07);
+}
+
+
+/* Image overlay */
+
+.mf-fleet-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.02),
+      rgba(0, 0, 0, 0.16)
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.mf-category {
+  position: absolute;
+  z-index: 3;
+
+  left: 15px;
+  top: 15px;
+
+  padding: 7px 12px;
+
+  border-radius: 30px;
+
+  color: #ffffff;
+
+  background:
+    rgba(20, 20, 22, 0.82);
+
+  backdrop-filter: blur(6px);
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SEAT BADGE
+========================================================= */
+
+.mf-seat-badge {
+  position: absolute;
+  z-index: 3;
+
+  right: 15px;
+  bottom: 15px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 8px 11px;
+
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ef2b33,
+      #b90c14
+    );
+
+  font-size: 9px;
+  font-weight: 900;
+
+  box-shadow:
+    0 7px 18px rgba(227, 30, 36, 0.23);
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+.mf-fleet-body {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 25px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   COLOR THEMES
+========================================================= */
+
+/* Red */
+
+.mf-red .mf-fleet-body {
+  background:
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(227, 30, 36, 0.10),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #fff1f2,
+      #ffe2e4
+    );
+}
+
+
+/* Dark */
+
+.mf-dark .mf-fleet-body {
+  background:
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(227, 30, 36, 0.25),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #303034,
+      #171719
+    );
+}
+
+
+/* Cream */
+
+.mf-cream .mf-fleet-body {
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf1,
+      #ffe9cf
+    );
+}
+
+
+/* Silver */
+
+.mf-silver .mf-fleet-body {
+  background:
+    linear-gradient(
+      135deg,
+      #f3f3f5,
+      #dedee3
+    );
+}
+
+
+/* =========================================================
+   LARGE BACKGROUND NUMBER
+========================================================= */
+
+.mf-fleet-number {
+  position: absolute;
+
+  right: 15px;
+  bottom: -18px;
+
+  color:
+    rgba(20, 20, 22, 0.055);
+
+  font-size: 95px;
+  font-weight: 900;
+
+  line-height: 1;
+
+  letter-spacing: -6px;
+
+  pointer-events: none;
+}
+
+
+.mf-dark
+.mf-fleet-number {
+  color:
+    rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.mf-fleet-body h3 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 12px;
+
+  padding-bottom: 13px;
+
+  color: #19191b;
+
+  font-size: 19px;
+  font-weight: 900;
+
+  line-height: 1.35;
+}
+
+
+.mf-fleet-body h3::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 38px;
+  height: 3px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #e31e24,
+      #ff912a
+    );
+
+  transition:
+    width 0.35s ease;
+}
+
+
+.mf-fleet-card:hover
+.mf-fleet-body h3::after {
+  width: 75px;
+}
+
+
+.mf-dark
+.mf-fleet-body h3 {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.mf-fleet-body p {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 22px;
+
+  color: #68686e;
+
+  font-size: 11.5px;
+
+  line-height: 1.75;
+}
+
+
+.mf-dark
+.mf-fleet-body p {
+  color: #b9b9bf;
+}
+
+
+/* =========================================================
+   FEATURE ROW
+========================================================= */
+
+.mf-feature-row {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: auto;
+}
+
+
+.mf-feature-row span {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 7px 9px;
+
+  border-radius: 8px;
+
+  color: #343438;
+
+  background:
+    rgba(255, 255, 255, 0.55);
+
+  border:
+    1px solid rgba(20, 20, 22, 0.06);
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+
+.mf-feature-row i {
+  color: #e31e24;
+
+  font-size: 8px;
+}
+
+
+.mf-dark
+.mf-feature-row span {
+  color: #dddddf;
+
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  border-color:
+    rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .mf-fleet-section {
+    padding: 55px 0;
+  }
+
+
+  .mf-fleet-head {
+    align-items: flex-start;
+    flex-direction: column;
+
+    margin-bottom: 30px;
+  }
+
+
+  .mf-fleet-image {
+    height: 220px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+  .mf-fleet-section {
+    padding: 40px 0;
+  }
+
+
+  .mf-fleet-head {
+    gap: 18px;
+
+    margin-bottom: 25px;
+  }
+
+
+  .mf-fleet-head h2 {
+    font-size: 30px;
+  }
+
+
+  .mf-fleet-head p {
+    font-size: 11.5px;
+
+    line-height: 1.7;
+  }
+
+
+  .mf-fleet-head-badge {
+    width: 100%;
+  }
+
+
+  .mf-fleet-card {
+    border-radius: 18px;
+  }
+
+
+  .mf-fleet-image {
+    height: 210px;
+  }
+
+
+  .mf-fleet-body {
+    padding: 21px;
+  }
+
+
+  .mf-fleet-body h3 {
+    font-size: 17px;
+  }
+
+
+  .mf-fleet-body p {
+    font-size: 11px;
+  }
+
+
+  .mf-fleet-number {
+    font-size: 75px;
+  }
+
+}
