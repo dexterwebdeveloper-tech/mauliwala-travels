@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const  WhyChooseUs = () => {
   return (
-    <div className="sis-why-choose-us-section sisf-page-background sis-br-radius section">
-      <div className="container">
+    <div className="bg-dark sis-why-choose-us-section sisf-page-background sis-br-radius section bg-dark">
+      <div className="container bg-dark">
 
         {/* Section Heading */}
-        <div className="row">
+        <div className="row bg-dark">
           <div className="col-lg-9">
             <div className="sisf-sis-section-title sis-section-title">
 
@@ -15,7 +15,7 @@ const  WhyChooseUs = () => {
                 WHY CHOOSE US
               </span>
 
-              <h2 className="sisf-m-title text-white sis-text-anime-style-3">
+              <h2 className="sisf-m-title text-white sis-text-anime-style-3 text-dark">
                 Delivering Reliable Chauffeur and Premium Car Rental Services
                 for Every Journey
               </h2>
@@ -54,7 +54,7 @@ const  WhyChooseUs = () => {
         </div>
 
         {/* Why Choose Us Cards */}
-        <div className="row">
+        <div className="row bg-dark">
 
           {/* Card 1 */}
           <div className="col-lg-4 col-md-6">

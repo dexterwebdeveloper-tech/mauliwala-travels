@@ -20,7 +20,8 @@ const whatWeDoItems = [
 
 const WhatWeDo = () => {
   return (
-    <section className="sisf-what-we-do-section py-2">
+    // <section className="sisf-what-we-do-section py-2">
+    <section className="sisf-what-we-do-section what-we-do-modern-bg py-2">
       <div className="container">
         <div className="row">
 

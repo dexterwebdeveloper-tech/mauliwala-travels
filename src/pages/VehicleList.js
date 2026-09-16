@@ -117,7 +117,7 @@ const VehicleList = () => {
                 Every Journey
               </h2>
 
-              <div
+              {/* <div
                 className="sisf-m-text"
                 data-aos="fade-up"
                 data-aos-delay="100"
@@ -128,7 +128,7 @@ const VehicleList = () => {
                   <br className="d-none d-md-block" />
                   transportation vehicles
                 </p>
-              </div>
+              </div> */}
 
             </div>
           </div>

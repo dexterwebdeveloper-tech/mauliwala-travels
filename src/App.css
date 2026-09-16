@@ -2,6 +2,506 @@
   color: red !important;
 }
 
+.fgb{
+  color: red !important;
+}
+
+/* =========================================
+   ABOUT US - MAULIWALA TRAVELS
+   Theme: Light Red + Red + Black
+========================================= */
+
+.sis-about-us-section {
+  position: relative;
+  overflow: hidden;
+  /* padding: 100px 0; */
+  background:
+    radial-gradient(circle at 10% 15%, rgba(220, 0, 0, 0.10), transparent 30%),
+    radial-gradient(circle at 90% 85%, rgba(220, 0, 0, 0.08), transparent 30%),
+    linear-gradient(135deg, #fffafa 0%, #fff1f1 45%, #ffe7e7 100%);
+}
+
+/* Decorative red glow */
+.sis-about-us-section::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  top: -160px;
+  left: -160px;
+  border-radius: 50%;
+  background: rgba(220, 0, 0, 0.08);
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.sis-about-us-section::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: -140px;
+  bottom: -140px;
+  border-radius: 50%;
+  background: rgba(180, 0, 0, 0.07);
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.sis-about-us-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.sisf-sis-section-title {
+  padding-right: 35px;
+}
+
+.sisf-m-subtitle {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 16px;
+  padding-left: 38px;
+
+  color: #c40000;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.sisf-m-subtitle::before {
+  /* content: ""; */
+  position: absolute;
+  width: 18px;
+  height: 3px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 10px;
+  /* background: #d40000; */
+}
+
+
+/* Main Heading */
+
+/* .sisf-m-title {
+  margin: 0 0 24px;
+  max-width: 620px;
+
+  color: #111111;
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+} */
+
+.sisf-m-title::selection,
+.sisf-m-subtitle::selection {
+  color: #ffffff;
+  background: #c40000;
+}
+
+
+/* Paragraph */
+
+.sisf-m-text {
+  max-width: 650px;
+}
+
+.sisf-m-text p {
+  margin: 0;
+  color: #555555;
+  font-size: 17px;
+  line-height: 1.85;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.sisf-m-button {
+  margin-top: 10px;
+}
+
+.sis-btn-default {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  min-height: 56px;
+  padding: 0 28px;
+
+  color: #ffffff !important;
+  background: #c90000;
+
+  border: 2px solid #c90000;
+  border-radius: 5px;
+
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+
+  box-shadow: 0 12px 30px rgba(190, 0, 0, 0.20);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sis-btn-default i {
+  font-size: 17px;
+  transition: transform 0.3s ease;
+}
+
+.sis-btn-default:hover {
+  color: black !important ;
+  background: #111111 !important;
+  border-color: #111111;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.20);
+}
+
+.sis-btn-default:hover i {
+  transform: translateX(5px);
+}
+
+
+/* =========================================
+   ABOUT IMAGE
+========================================= */
+
+.sisf-sis-about-image-right {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sisf-sis-about-image-right::before {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  right: 5%;
+  bottom: 2%;
+  background: rgba(210, 0, 0, 0.12);
+  border-radius: 30px;
+  transform: rotate(5deg);
+  z-index: 0;
+}
+
+.sisf-sis-about-image-right figure {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 7px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 25px 60px rgba(120, 0, 0, 0.16),
+    0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sisf-sis-about-image-right img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border-radius: 13px;
+
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
+}
+
+.sisf-sis-about-image-right figure:hover img {
+  transform: scale(1.04);
+  filter: saturate(1.08);
+}
+
+
+/* =========================================
+   BOTTOM CARDS
+========================================= */
+
+.sisf-e-about-bottom-content {
+  /* margin-top: 85px; */
+}
+
+/* .sisf-about-contents {
+  position: relative;
+  height: 100%;
+  padding: 38px 32px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  border: 1px solid rgba(190, 0, 0, 0.12);
+  border-radius: 14px;
+
+  box-shadow: 0 12px 35px rgba(120, 0, 0, 0.07);
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.sisf-about-contents:hover {
+  transform: translateY(-8px);
+
+  background: #ffffff;
+
+  border-color: rgba(200, 0, 0, 0.30);
+
+  box-shadow:
+    0 20px 45px rgba(130, 0, 0, 0.13),
+    0 5px 15px rgba(0, 0, 0, 0.05);
+}
+ */
+
+/* =========================================
+   ICON
+========================================= */
+
+.sis-icon-image {
+  display: flex;
+  align-items: center;
+}
+
+.sisf-about-icon-image {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff0f0;
+
+  border: 1px solid rgba(200, 0, 0, 0.15);
+  border-radius: 12px;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.sisf-about-icon-image figure {
+  margin: 0;
+}
+
+.sisf-about-icon-image img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.sisf-about-contents:hover .sisf-about-icon-image {
+  background: #c90000;
+  transform: translateY(-3px);
+}
+
+.sisf-about-contents:hover .sisf-about-icon-image img {
+  filter: brightness(0) invert(1);
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.sisf-sis-e-title {
+  margin-bottom: 12px;
+}
+
+.sisf-e-title {
+  margin: 0;
+
+  color: #151515;
+  font-size: 21px;
+  line-height: 1.35;
+  font-weight: 750;
+
+  transition: color 0.3s ease;
+}
+
+.sisf-about-contents:hover .sisf-e-title {
+  color: #c40000;
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.sisf-e-text p {
+  margin: 0;
+
+  color: #666666;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.sisf-page-text-line {
+  max-width: 390px;
+}
+
+
+/* =========================================
+   RED TOP LINE ON CARDS
+========================================= */
+
+.sisf-about-contents::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 32px;
+  right: 32px;
+
+  height: 3px;
+
+  background: #c90000;
+
+  border-radius: 0 0 10px 10px;
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.35s ease;
+}
+
+.sisf-about-contents:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+  .sis-about-us-section {
+    padding: 75px 0;
+  }
+
+  .sisf-sis-section-title {
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .sisf-m-title {
+    font-size: 42px;
+  }
+
+  .sisf-sis-about-image-right {
+    margin-top: 20px;
+  }
+
+  .sisf-e-about-bottom-content {
+    margin-top: 60px;
+  }
+
+  .sisf-about-contents {
+    margin-bottom: 25px;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .sis-about-us-section {
+    padding: 60px 0;
+  }
+
+  .sisf-m-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .sisf-m-title {
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: -0.8px;
+  }
+
+  .sisf-m-text p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .sis-btn-default {
+    width: 100%;
+  }
+
+  .sisf-sis-about-image-right::before {
+    width: 90%;
+    height: 90%;
+  }
+
+  .sisf-e-about-bottom-content {
+    margin-top: 50px;
+  }
+
+  .sisf-about-contents {
+    padding: 30px 25px;
+  }
+
+  .sisf-about-contents::before {
+    left: 25px;
+    right: 25px;
+  }
+
+  .sisf-e-title {
+    font-size: 19px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .sis-about-us-section {
+    padding: 50px 0;
+  }
+
+  .sisf-m-title {
+    font-size: 30px;
+  }
+
+  .sisf-m-text p {
+    font-size: 14px;
+  }
+
+  .sisf-about-icon-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sisf-about-icon-image img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
 
 .sisf-m-btn a{
   color: red !important;
@@ -5085,4 +5585,1157 @@ a{
 
 ul{
   list-style: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   WHY CHOOSE US
+   UI ONLY - LIGHT RED / RED / BLACK THEME
+   Text colors are NOT changed
+========================================= */
+
+.sis-why-choose-us-section {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0 !important;
+
+  background:
+    radial-gradient(
+      circle at 5% 10%,
+      rgba(220, 0, 0, 0.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 95% 90%,
+      rgba(190, 0, 0, 0.08),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #fffafa 0%,
+      #fff3f3 45%,
+      #ffeaea 100%
+    );
+}
+
+
+/* =========================================
+   DECORATIVE BACKGROUND
+========================================= */
+
+.sis-why-choose-us-section::before {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  top: -190px;
+  right: -120px;
+
+  background: rgba(210, 0, 0, 0.07);
+  border-radius: 50%;
+  filter: blur(10px);
+
+  pointer-events: none;
+}
+
+.sis-why-choose-us-section::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  bottom: -150px;
+  left: -120px;
+
+  background: rgba(210, 0, 0, 0.06);
+  border-radius: 50%;
+  filter: blur(15px);
+
+  pointer-events: none;
+}
+
+.sis-why-choose-us-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   SECTION HEADER UI
+========================================= */
+
+.sis-why-choose-us-section .sisf-sis-section-title {
+  position: relative;
+}
+
+.sis-why-choose-us-section .sisf-m-subtitle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  padding-left: 38px;
+}
+
+.sis-why-choose-us-section .sisf-m-subtitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 28px;
+  height: 3px;
+
+  background: #c90000;
+  border-radius: 10px;
+
+  transform: translateY(-50%);
+}
+
+
+/* =========================================
+   BUTTON UI
+   Does not modify text color
+========================================= */
+
+.sis-why-choose-us-section .sis-btn-default {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+
+  min-height: 55px;
+  padding: 0 27px;
+
+  background: #c90000;
+  border: 2px solid #c90000;
+  border-radius: 5px;
+
+  box-shadow:
+    0 12px 30px rgba(190, 0, 0, 0.18);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.sis-why-choose-us-section .sis-btn-default::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  background: #111111;
+
+  transition: width 0.35s ease;
+  z-index: 0;
+}
+
+.sis-why-choose-us-section .sis-btn-default i,
+.sis-why-choose-us-section .sis-btn-default {
+  position: relative;
+}
+
+.sis-why-choose-us-section .sis-btn-default i {
+  transition: transform 0.3s ease;
+}
+
+.sis-why-choose-us-section .sis-btn-default:hover::before {
+  width: 100%;
+}
+
+.sis-why-choose-us-section .sis-btn-default:hover {
+  transform: translateY(-3px);
+
+  border-color: #111111;
+
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.18);
+}
+
+.sis-why-choose-us-section .sis-btn-default:hover i {
+  transform: translateX(5px);
+}
+
+
+/* =========================================
+   LEFT IMAGE UI
+========================================= */
+
+.sisf-sis-why-choose-us-image-left {
+  position: relative;
+}
+
+.sis-why-choose-us-image-left figure {
+  position: relative;
+  margin: 0;
+
+  overflow: hidden;
+  border-radius: 20px;
+
+  border: 7px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 25px 60px rgba(120, 0, 0, 0.14),
+    0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sis-why-choose-us-image-left figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(190, 0, 0, 0.05),
+    transparent 50%
+  );
+
+  pointer-events: none;
+}
+
+.sis-why-choose-us-image-left img {
+  display: block;
+  width: 100%;
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
+}
+
+.sis-why-choose-us-image-left figure:hover img {
+  transform: scale(1.035);
+  filter: saturate(1.08);
+}
+
+
+/* =========================================
+   RATING / COUNTER BOX
+========================================= */
+
+.sisf-sis-page-rating-part-bottom {
+  position: absolute !important;
+
+  right: -25px;
+  bottom: -35px;
+
+  min-width: 290px;
+
+  /* background:
+    linear-gradient(
+      135deg,
+      #c90000 0%,
+      #a90000 100%
+    ) !important; */
+
+  border: 5px solid #ffffff;
+  border-radius: 16px !important;
+
+  box-shadow:
+    0 20px 45px rgba(120, 0, 0, 0.25);
+
+  z-index: 5;
+}
+/* 
+.sisf-sis-page-rating-part-bottom .sisf-e-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.sisf-sis-page-rating-part-bottom .sis-counter-item {
+  flex: 1;
+  text-align: center;
+}
+
+.sisf-sis-page-rating-part-bottom figure {
+  margin: 0;
+}
+
+.sisf-sis-page-rating-part-bottom .sis-users-image img {
+  width: 48px;
+  height: 48px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 3px solid rgba(255, 255, 255, 0.9);
+}
+
+.sisf-sis-page-rating-part-bottom .sis-google-image img {
+  width: 42px;
+  height: 42px;
+
+  padding: 7px;
+
+  background: #ffffff;
+  border-radius: 50%;
+} */
+
+/* .sisf-sis-page-rating-part-bottom .sis-counter-title h2 {
+  margin: 5px 0;
+
+  justify-content: center;
+}
+
+.sisf-sis-page-rating-part-bottom .sisf-m-divider {
+  width: 1px;
+  height: 80px;
+
+  background: rgba(255, 255, 255, 0.30);
+}
+
+
+
+
+.sis-why-choose-hover-item {
+  position: relative;
+
+  margin-bottom: 20px;
+  padding: 26px 28px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid rgba(190, 0, 0, 0.12);
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 25px rgba(100, 0, 0, 0.06);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+ */
+
+/* Background image */
+/* .sis-why-choose-hover-item .sisf-background-image {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  z-index: 0;
+
+  transition: opacity 0.35s ease;
+}
+
+.sis-why-choose-hover-item .sisf-background-image figure {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sis-why-choose-hover-item .sisf-background-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+} */
+
+
+/* Keep content above background */
+
+.sis-why-choose-hover-item .sisf-e-inner {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Hover */
+
+.sis-why-choose-hover-item:hover {
+  transform: translateX(6px) translateY(-3px);
+
+  background: #ffffff;
+
+  border-color: rgba(200, 0, 0, 0.28);
+
+  box-shadow:
+    0 18px 40px rgba(120, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   ICON UI
+========================================= */
+
+.sis-why-choose-hover-item .sis-icon-image {
+  flex: 0 0 auto;
+}
+
+.sis-why-choose-hover-item .sisf-m-page-icon-image {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff3f3,
+      #ffe2e2
+    );
+
+  border: 1px solid rgba(200, 0, 0, 0.13);
+
+  border-radius: 12px;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sis-why-choose-hover-item .sisf-m-page-icon-image figure {
+  margin: 0;
+}
+
+.sis-why-choose-hover-item .sisf-m-page-icon-image img {
+  width: 38px;
+  height: 38px;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.sis-why-choose-hover-item:hover .sisf-m-page-icon-image {
+  background: #c90000;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(190, 0, 0, 0.20);
+}
+
+.sis-why-choose-hover-item:hover .sisf-m-page-icon-image img {
+  transform: scale(1.08);
+  filter: brightness(0) invert(1);
+}
+
+
+/* =========================================
+   RED ACCENT LINE
+========================================= */
+
+.sis-why-choose-hover-item::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 0;
+
+  background: #c90000;
+
+  border-radius: 0 0 5px 5px;
+
+  transition: height 0.35s ease;
+
+  z-index: 4;
+}
+
+.sis-why-choose-hover-item:hover::before {
+  height: 100%;
+}
+
+
+/* =========================================
+   CONTENT SPACING ONLY
+   No color changes
+========================================= */
+
+.sis-why-choose-hover-item .sisf-e-contents {
+  flex: 1;
+}
+
+.sis-why-choose-hover-item .sisf-sis-e-title {
+  margin-bottom: 8px;
+}
+
+.sis-why-choose-hover-item .sis-m-text {
+  max-width: 620px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1199px) {
+
+  .sisf-sis-page-rating-part-bottom {
+    right: 15px;
+    bottom: -30px;
+    min-width: 360px;
+  }
+
+  .sis-why-choose-hover-item {
+    padding: 23px;
+  }
+}
+
+
+@media (max-width: 991px) {
+
+  .sis-why-choose-us-section {
+    padding: 70px 0 !important;
+  }
+
+  .sisf-sis-why-choose-us-image-left {
+    margin-bottom: 70px;
+  }
+
+  .sisf-sis-page-rating-part-bottom {
+    right: 20px;
+    bottom: -35px;
+  }
+
+  .sis-why-choose-hover-item {
+    margin-bottom: 18px;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .sis-why-choose-us-section {
+    padding: 60px 0 !important;
+  }
+
+  .sisf-sis-why-choose-us-section {
+    padding: 60px 0 !important;
+  }
+
+  .sisf-sis-why-choose-us-image-left {
+    margin-bottom: 90px;
+  }
+
+  .sisf-sis-page-rating-part-bottom {
+    position: relative !important;
+
+    right: auto;
+    bottom: auto;
+
+    min-width: 0;
+    width: 100%;
+
+    margin-top: -35px;
+  }
+
+  .sisf-sis-page-rating-part-bottom .sisf-e-inner {
+    gap: 15px;
+    padding: 20px !important;
+  }
+
+  .sisf-sis-page-rating-part-bottom .sisf-m-divider {
+    height: 70px;
+  }
+
+  .sis-why-choose-hover-item {
+    padding: 22px 20px;
+  }
+
+  .sis-why-choose-hover-item .sisf-inner {
+    gap: 18px !important;
+    align-items: flex-start !important;
+  }
+
+  .sis-why-choose-hover-item .sisf-m-page-icon-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sis-why-choose-hover-item .sisf-m-page-icon-image img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .sisf-sis-page-rating-part-bottom .sisf-e-inner {
+    flex-direction: column;
+  }
+
+  .sisf-sis-page-rating-part-bottom .sisf-m-divider {
+    width: 80%;
+    height: 1px;
+  }
+
+  .sis-why-choose-hover-item .sisf-inner {
+    align-items: flex-start !important;
+  }
+
+  .sis-why-choose-hover-item .sisf-icon-image {
+    margin-top: 3px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   WHAT WE DO - FLOWING FIRE / FLAME BG
+   ========================================== */
+
+.what-we-do-modern-bg {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #fffafa;
+  padding-top: 70px !important;
+  padding-bottom: 80px !important;
+}
+
+/* Main flowing flame shape */
+.what-we-do-modern-bg::before {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  top: -280px;
+  left: -180px;
+
+  background:
+    radial-gradient(
+      ellipse at 60% 65%,
+      rgba(239, 103, 103, 0.24) 0%,
+      rgba(239, 103, 103, 0.14) 28%,
+      rgba(239, 103, 103, 0.05) 52%,
+      transparent 72%
+    );
+
+  border-radius: 58% 42% 67% 33% / 42% 61% 39% 58%;
+
+  transform: rotate(-25deg);
+  filter: blur(2px);
+  z-index: -2;
+  animation: flameFloat 8s ease-in-out infinite alternate;
+}
+
+
+/* Second flowing flame */
+.what-we-do-modern-bg::after {
+  content: "";
+  position: absolute;
+  width: 720px;
+  height: 650px;
+  right: -310px;
+  bottom: -350px;
+
+  background:
+    radial-gradient(
+      ellipse at 35% 35%,
+      rgba(239, 103, 103, 0.20) 0%,
+      rgba(239, 103, 103, 0.10) 30%,
+      rgba(239, 103, 103, 0.04) 55%,
+      transparent 74%
+    );
+
+  border-radius: 37% 63% 31% 69% / 61% 36% 64% 39%;
+
+  transform: rotate(25deg);
+  filter: blur(3px);
+  z-index: -2;
+  animation: flameFloatTwo 10s ease-in-out infinite alternate;
+}
+
+
+/* ==========================================
+   EXTRA ORGANIC FIRE SHAPES
+   ========================================== */
+
+.what-we-do-modern-bg .container {
+  position: relative;
+  z-index: 3;
+}
+
+.what-we-do-modern-bg .container::before {
+  content: "";
+  position: absolute;
+
+  width: 230px;
+  height: 300px;
+
+  left: -130px;
+  top: 120px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(239, 103, 103, 0.13),
+      rgba(255, 183, 183, 0.06),
+      transparent 70%
+    );
+
+  border-radius:
+    70% 30% 65% 35%
+    / 45% 65% 35% 55%;
+
+  transform: rotate(28deg);
+  filter: blur(1px);
+
+  z-index: -1;
+}
+
+
+/* Right organic flame */
+.what-we-do-modern-bg .container::after {
+  content: "";
+  position: absolute;
+
+  width: 260px;
+  height: 340px;
+
+  right: -120px;
+  top: 40px;
+
+  background:
+    linear-gradient(
+      215deg,
+      rgba(239, 103, 103, 0.12),
+      rgba(255, 184, 184, 0.05),
+      transparent 72%
+    );
+
+  border-radius:
+    35% 65% 42% 58%
+    / 65% 35% 65% 35%;
+
+  transform: rotate(-35deg);
+  filter: blur(2px);
+
+  z-index: -1;
+}
+
+
+/* ==========================================
+   FEATURE CARDS
+   ========================================== */
+
+.what-we-do-modern-bg .sisf-m-page-contents {
+  position: relative;
+  height: 100%;
+  padding: 30px 25px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid rgba(231, 105, 105, 0.14);
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 15px 45px rgba(30, 39, 60, 0.06);
+
+  backdrop-filter: blur(10px);
+
+  transition: all 0.4s ease;
+}
+
+.what-we-do-modern-bg .sisf-m-page-contents:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(231, 105, 105, 0.3);
+
+  box-shadow:
+    0 20px 55px rgba(231, 105, 105, 0.12);
+}
+
+
+/* ==========================================
+   ICON - ORGANIC CIRCLE
+   ========================================== */
+
+.what-we-do-modern-bg .sisf-m-page-icon-image {
+  position: relative;
+
+  width: 110px;
+  height: 110px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+
+  border: 1px solid rgba(231, 105, 105, 0.3);
+
+  border-radius:
+    46% 54% 51% 49%
+    / 55% 45% 55% 45%;
+
+  box-shadow:
+    0 12px 30px rgba(231, 105, 105, 0.10);
+
+  transition: all 0.5s ease;
+}
+
+
+/* Organic outer shape */
+.what-we-do-modern-bg .sisf-m-page-icon-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 132px;
+  height: 125px;
+
+  border: 1px dashed rgba(231, 105, 105, 0.35);
+
+  border-radius:
+    60% 40% 48% 52%
+    / 43% 57% 46% 54%;
+
+  transform: rotate(25deg);
+
+  transition: all 0.5s ease;
+}
+
+
+/* Fire-like small dot */
+.what-we-do-modern-bg .sisf-m-page-icon-image::after {
+  content: "";
+
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  background: #e66b6b;
+
+  border-radius:
+    60% 40% 55% 45%
+    / 45% 55% 45% 55%;
+
+  top: 2px;
+  right: 8px;
+
+  transform: rotate(25deg);
+}
+
+
+/* Hover icon */
+.what-we-do-modern-bg .sisf-m-page-contents:hover
+.sisf-m-page-icon-image {
+  transform: rotate(-4deg) scale(1.04);
+}
+
+
+/* ==========================================
+   LEARN MORE BUTTON
+   ========================================== */
+
+.what-we-do-outline-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+
+  color: #df6868 !important;
+
+  background: #fff7f7 !important;
+
+  border: 1px solid #e89a9a !important;
+
+  border-radius: 50px !important;
+
+  padding: 11px 20px !important;
+
+  transition: all 0.35s ease !important;
+}
+
+.what-we-do-outline-btn:hover {
+  color: #fff !important;
+
+  background: #e56b6b !important;
+
+  border-color: #e56b6b !important;
+
+  transform: translateX(3px);
+}
+
+.what-we-do-outline-btn i {
+  transition: transform 0.3s ease;
+}
+
+.what-we-do-outline-btn:hover i {
+  transform: translateX(5px);
+}
+
+
+/* ==========================================
+   BOOK VEHICLE BUTTON
+   ========================================== */
+
+.what-we-do-main-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 12px;
+
+  color: #fff !important;
+
+  background: #e56b6b !important;
+
+  border: 1px solid #e56b6b !important;
+
+  border-radius: 50px !important;
+
+  padding: 14px 28px !important;
+
+  box-shadow:
+    0 10px 25px rgba(229, 107, 107, 0.20);
+
+  transition: all 0.35s ease !important;
+}
+
+.what-we-do-main-btn:hover {
+  color: #fff !important;
+
+  background: #d95757 !important;
+
+  border-color: #d95757 !important;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 30px rgba(229, 107, 107, 0.28);
+}
+
+.what-we-do-main-btn i {
+  transition: transform 0.3s ease;
+}
+
+.what-we-do-main-btn:hover i {
+  transform: translateX(5px);
+}
+
+
+/* ==========================================
+   IMAGE - ORGANIC BACKGROUND
+   ========================================== */
+
+.what-we-do-modern-bg
+.sisf-e-what-we-do-image-right {
+  position: relative;
+}
+
+
+/* Flowing shape behind image */
+.what-we-do-modern-bg
+.sisf-e-what-we-do-image-right::before {
+  content: "";
+
+  position: absolute;
+
+  width: 470px;
+  height: 520px;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-12deg);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(239, 103, 103, 0.12),
+      rgba(255, 194, 194, 0.05),
+      transparent 70%
+    );
+
+  border-radius:
+    45% 55% 65% 35%
+    / 60% 40% 60% 40%;
+
+  z-index: -1;
+}
+
+
+/* Second flowing outline */
+.what-we-do-modern-bg
+.sisf-e-what-we-do-image-right::after {
+  content: "";
+
+  position: absolute;
+
+  width: 510px;
+  height: 540px;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(18deg);
+
+  border:
+    1px dashed rgba(231, 105, 105, 0.20);
+
+  border-radius:
+    38% 62% 42% 58%
+    / 55% 45% 55% 45%;
+
+  z-index: -1;
+}
+
+
+/* ==========================================
+   SATISFACTION BOX
+   ========================================== */
+
+.what-we-do-modern-bg
+.sisf-e-what-we-do-content-rightside {
+  background: #11192e !important;
+
+  border: 5px solid rgba(255, 255, 255, 0.92);
+
+  box-shadow:
+    0 18px 45px rgba(17, 25, 46, 0.20);
+}
+
+
+/* ==========================================
+   ANIMATION
+   ========================================== */
+
+@keyframes flameFloat {
+
+  0% {
+    transform:
+      rotate(-25deg)
+      translate(0, 0)
+      scale(1);
+  }
+
+  100% {
+    transform:
+      rotate(-18deg)
+      translate(20px, 15px)
+      scale(1.06);
+  }
+}
+
+
+@keyframes flameFloatTwo {
+
+  0% {
+    transform:
+      rotate(25deg)
+      translate(0, 0)
+      scale(1);
+  }
+
+  100% {
+    transform:
+      rotate(18deg)
+      translate(-20px, -15px)
+      scale(1.07);
+  }
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 991px) {
+
+  .what-we-do-modern-bg {
+    padding-top: 50px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .what-we-do-modern-bg
+  .sisf-e-what-we-do-image-right {
+    margin-top: 50px;
+  }
+
+  .what-we-do-modern-bg
+  .sisf-e-what-we-do-image-right::before {
+    width: 350px;
+    height: 400px;
+  }
+
+  .what-we-do-modern-bg
+  .sisf-e-what-we-do-image-right::after {
+    width: 380px;
+    height: 420px;
+  }
+
+}
+
+
+@media (max-width: 575px) {
+
+  .what-we-do-modern-bg
+  .sisf-m-page-icon-image {
+    width: 95px;
+    height: 95px;
+  }
+
+  .what-we-do-modern-bg
+  .sisf-m-page-icon-image::before {
+    width: 115px;
+    height: 110px;
+  }
+
+  .what-we-do-modern-bg
+  .sisf-m-page-contents {
+    padding: 25px 20px;
+  }
+
 }

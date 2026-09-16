@@ -3,42 +3,42 @@ import React from "react";
 const services = [
   {
     title: "Airport Pickup & Drop",
-    image: "/images/services/Airport-Pickup-&-Drop.jpg",
+    image: "/images/services/Airport-Pickup-&-Drop.jpeg",
     description:
       "Enjoy safe, punctual, and comfortable airport pickup and drop services with well-maintained vehicles and experienced drivers.",
     delay: 100,
   },
   {
     title: "Corporate Travel",
-    image: "/images/services/Corporate-Urbania-Bus-Rentals.jpg",
+    image: "/images/services/Corporate-Urbania-Bus-Rentals.jpeg",
     description:
       "Reliable and comfortable transportation solutions for corporate meetings, business trips, conferences, and group travel.",
     delay: 300,
   },
   {
     title: "Wedding Travel",
-    image: "/images/services/Wedding-Urbania-Bus.jpg",
+    image: "/images/services/Wedding-Urbania-Bus.jpeg",
     description:
       "Make your special occasions memorable with comfortable and stylish transportation for weddings, family functions, and celebrations.",
     delay: 500,
   },
   {
     title: "Holiday & Tour Packages",
-    image: "/images/services/Holiday-Packages.jpg",
+    image: "/images/services/Holiday-Packages.jpeg",
     description:
       "Explore your favorite destinations with customized holiday packages, comfortable vehicles, and experienced drivers for a stress-free journey.",
     delay: 100,
   },
   {
     title: "Local Travel",
-    image: "/images/services/Local-Travel.jpg",
+    image: "/images/services/Local-Travel.jpeg",
     description:
       "Convenient local transportation for sightseeing, shopping, family trips, business visits, and everyday travel needs.",
     delay: 300,
   },
   {
     title: "Outstation Travel",
-    image: "/images/services/Outstation-Urbania-Bus.jpg",
+    image: "/images/services/Outstation-Urbania-Bus.jpeg",
     description:
       "Travel comfortably across cities with our dependable outstation taxi and bus services, ideal for family trips, group tours, and long-distance journeys.",
     delay: 500,
@@ -86,7 +86,7 @@ const OurServices = () => {
               >
                 <a
                   href="/services"
-                  className="sis-btn-default btn-light"
+                  className="sis-btn-default"
                 >
                   View All Services
                   <i className="fa-solid fa-arrow-right-long"></i>

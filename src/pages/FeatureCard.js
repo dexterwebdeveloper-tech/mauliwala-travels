@@ -133,7 +133,7 @@ const PremiumFeatures = () => {
               data-aos="fade-left"
               data-aos-delay="300"
             >
-              <Link to="/our-fleet" className="sis-btn-default btn-light">
+              <Link to="/our-fleet" className="sis-btn-default">
                 Discover Fleet
                 <i className="fa-solid fa-arrow-right-long"></i>
               </Link>

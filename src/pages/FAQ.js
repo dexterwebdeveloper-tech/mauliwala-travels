@@ -32,12 +32,12 @@ const FAQ = () => {
       answer:
         "Yes. Force Urbania is an excellent choice for families, corporate groups, wedding groups, friends, and large travel parties. It offers comfortable seating and spacious interiors for long-distance journeys.",
     },
-    {
-      id: "six",
-      question: "Can I book Urbania for weddings and special events?",
-      answer:
-        "Yes, Mauliwala Travels provides Force Urbania rental for weddings, pre-wedding functions, family events, corporate events, religious trips, sightseeing tours, and other special occasions.",
-    },
+    // {
+    //   id: "six",
+    //   question: "Can I book Urbania for weddings and special events?",
+    //   answer:
+    //     "Yes, Mauliwala Travels provides Force Urbania rental for weddings, pre-wedding functions, family events, corporate events, religious trips, sightseeing tours, and other special occasions.",
+    // },
   ];
 
   return (
@@ -109,7 +109,7 @@ const FAQ = () => {
                 <div className="sisf-m-button">
                   <a
                     href="contact-us"
-                    className="sis-btn-default btn-light"
+                    className="sis-btn-default"
                   >
                     Contact Mauliwala Travels
                     <i className="fa-solid fa-arrow-right-long"></i>

@@ -235,7 +235,7 @@ const BookYourRide = () => {
               >
                 <Link
                   to="/contact"
-                  className="sis-btn-default btn-light"
+                  className="sis-btn-default"
                 >
                   Book Your Vehicle Now
                   <i className="fa-solid fa-arrow-right-long"></i>

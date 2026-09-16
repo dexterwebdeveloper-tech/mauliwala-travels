@@ -51,7 +51,7 @@ const clientLogos = [
 
 const Testimonial = () => {
   return (
-    <div className="sis-testimonial-section section">
+    <div className="sis-testimonial-section py-3">
       <div className="container">
         <div className="row">
 
@@ -67,21 +67,21 @@ const Testimonial = () => {
               </h2>
             </div>
 
-            <div className="sis-comman-bottom-line-text mt-0 d-flex align-items-center flex-wrap gap-3">
+            {/* <div className="sis-comman-bottom-line-text mt-0 d-flex align-items-center flex-wrap gap-3"> */}
 
-              <div className="sis-e-rating-text">
+              {/* <div className="sis-e-rating-text">
                 <h3>4.9/5 Ratings</h3>
-              </div>
+              </div> */}
 
-              <div className="sisf-rating-image">
+              {/* <div className="sisf-rating-image">
                 <figure>
                   <img
                     src="images/trustpilot_logo.svg"
                     alt="Mauliwala Urbania Rental Reviews"
                   />
                 </figure>
-              </div>
-
+              </div> */}
+{/* 
               <div className="sisf-sis-e-box">
 
                 <div className="sisf-m-text">
@@ -96,8 +96,8 @@ const Testimonial = () => {
                   </p>
                 </div>
 
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </div>
 
           {/* Testimonials */}
