@@ -226,9 +226,9 @@
 .privacy-hero-points small {
   display: block;
 
-  color: #77777d;
+  color: white;
 
-  font-size: 7px;
+  font-size: 15px;
   font-weight: 900;
 
   letter-spacing: 1px;
@@ -243,7 +243,7 @@
 
   text-decoration: none;
 
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 800;
 }
 
@@ -385,7 +385,7 @@
 
   color: #ff676d;
 
-  font-size: 9px;
+  font-size: 16px;
   font-weight: 900;
 
   letter-spacing: 1.6px;
@@ -409,7 +409,7 @@
 
   color: #b7b7bd;
 
-  font-size: 12px;
+  font-size: 16px;
 
   line-height: 1.8;
 }
@@ -711,7 +711,7 @@
 
   color: #67686f;
 
-  font-size: 12px;
+  font-size: 16px;
 
   line-height: 1.8;
 }
@@ -835,7 +835,7 @@
 
   color: #ffd1d3;
 
-  font-size: 8px;
+  font-size: 16px;
   font-weight: 900;
 
   letter-spacing: 1.5px;
@@ -857,7 +857,7 @@
 
   color: #ffe0e1;
 
-  font-size: 11px;
+  font-size: 16px;
 
   line-height: 1.7;
 }
@@ -899,7 +899,7 @@
 
   color: #8c8c92;
 
-  font-size: 7px;
+  font-size: 15px;
   font-weight: 800;
 }
 
@@ -909,7 +909,7 @@
 
   color: #1b1b1d;
 
-  font-size: 10px;
+  font-size: 16px;
 }
 
 
@@ -964,7 +964,7 @@
 .privacy-use-heading > span {
   color: #ff656b;
 
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 900;
 
   letter-spacing: 1.7px;
@@ -991,7 +991,7 @@
 
   color: #99999f;
 
-  font-size: 12px;
+  font-size: 16px;
 
   line-height: 1.7;
 }
@@ -1092,7 +1092,7 @@
 
   color: #9e9ea4;
 
-  font-size: 10px;
+  font-size: 15px;
 
   line-height: 1.6;
 }
@@ -1166,7 +1166,7 @@
 .privacy-contact-tag {
   color: #ff676d;
 
-  font-size: 9px;
+  font-size: 16px;
   font-weight: 900;
 
   letter-spacing: 1.5px;
@@ -1200,7 +1200,7 @@
 
   color: #a1a1a7;
 
-  font-size: 12px;
+  font-size: 16px;
 
   line-height: 1.7;
 }
@@ -1283,7 +1283,7 @@
 
   color: #ffd0d2;
 
-  font-size: 7px;
+  font-size: 15px;
   font-weight: 800;
 }
 
@@ -1298,7 +1298,7 @@
 
   color: #ffffff;
 
-  font-size: 10px;
+  font-size: 16px;
 }
 
 

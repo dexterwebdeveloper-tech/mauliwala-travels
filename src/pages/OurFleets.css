@@ -88,7 +88,7 @@
 
   color: #696970;
 
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -149,7 +149,7 @@
 
 
 .mf-fleet-head-badge strong {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 900;
 }
 
@@ -159,7 +159,7 @@
 
   color: #aaaab0;
 
-  font-size: 8px;
+  font-size: 14px;
 }
 
 
@@ -499,7 +499,7 @@
 
   color: #68686e;
 
-  font-size: 11.5px;
+  font-size: 16px;
 
   line-height: 1.75;
 }
@@ -546,7 +546,7 @@
   border:
     1px solid rgba(20, 20, 22, 0.06);
 
-  font-size: 8px;
+  font-size: 14px;
   font-weight: 800;
 }
 

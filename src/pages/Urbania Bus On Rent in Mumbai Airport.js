@@ -333,7 +333,7 @@ const productSchema = {
     "bestRating": "5",
     "worstRating": "1",
     "ratingValue": "4.8",
-    "ratingCount": "8517"
+    "ratingCount": "23757"
   },
   "offers": {
     "@type": "Offer",
@@ -615,7 +615,7 @@ const productSchema = {
                                         </header>
 
                                         <address className="pc-address">
-                                            <strong>Mauliwala</strong><br />
+                                           <strong>Mauliwala Travels</strong><br />
 
                                             Tapkir Nagar, MIT Engineering Campus,
                                             Dehu Phata Alandi Devachi,

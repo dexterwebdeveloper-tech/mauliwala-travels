@@ -234,7 +234,7 @@ const BookYourRide = () => {
                 data-aos-delay="500"
               >
                 <Link
-                  to="/contact"
+                  to="/contact-us"
                   className="sis-btn-default"
                 >
                   Book Your Vehicle Now

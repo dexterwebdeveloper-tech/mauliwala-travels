@@ -230,9 +230,9 @@
 
   margin-bottom: 2px;
 
-  color: #7d7d83;
+  color: white;
 
-  font-size: 8px;
+  font-size: 16px;
   font-weight: 900;
 
   letter-spacing: 1px;
@@ -247,7 +247,7 @@
 
   text-decoration: none;
 
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 800;
 }
 
@@ -343,7 +343,7 @@
 
   color: var(--terms-red);
 
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 900;
 
   letter-spacing: 1.6px;
@@ -366,7 +366,7 @@
 
   color: var(--terms-grey);
 
-  font-size: 13px;
+  font-size: 15px;
 
   line-height: 1.8;
 }
@@ -536,7 +536,7 @@
 
   color: var(--terms-grey);
 
-  font-size: 12px;
+  font-size: 16px;
 
   line-height: 1.75;
 }
@@ -614,7 +614,7 @@
 
   color: #ff686e;
 
-  font-size: 8px;
+  font-size: 15px;
   font-weight: 900;
 
   letter-spacing: 1.5px;
@@ -637,7 +637,7 @@
 
   color: #a8a8ae;
 
-  font-size: 11px;
+  font-size: 16px;
 
   line-height: 1.65;
 }
@@ -680,7 +680,7 @@
 
   color: #ffd2d4;
 
-  font-size: 7px;
+  font-size: 15px;
   font-weight: 800;
 }
 
@@ -690,7 +690,7 @@
 
   color: #ffffff;
 
-  font-size: 11px;
+  font-size: 15px;
 }
 
 
@@ -733,7 +733,7 @@
 .confirm-heading > span {
   color: var(--terms-red);
 
-  font-size: 9px;
+  font-size: 16px;
   font-weight: 900;
 
   letter-spacing: 1.7px;
@@ -837,7 +837,7 @@
 
   color: var(--terms-grey);
 
-  font-size: 11px;
+  font-size: 15px;
 
   line-height: 1.65;
 }
@@ -915,7 +915,7 @@
 .terms-contact-text > span {
   color: #ff686e;
 
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 900;
 
   letter-spacing: 1.5px;
@@ -950,7 +950,7 @@
 
   color: #9e9ea4;
 
-  font-size: 12px;
+  font-size: 16px;
 
   line-height: 1.7;
 }
@@ -1021,7 +1021,7 @@
 
   color: #ffd2d4;
 
-  font-size: 7px;
+  font-size: 13px;
   font-weight: 800;
 }
 
@@ -1426,7 +1426,7 @@
 
   color: #ff686e;
 
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 900;
 
   letter-spacing: 1.7px;
@@ -1448,7 +1448,7 @@
 
   color: #b9b9bf;
 
-  font-size: 13px;
+  font-size: 16px;
 
   line-height: 1.8;
 }
@@ -1800,7 +1800,7 @@
 
   color: #66676e;
 
-  font-size: 12px;
+  font-size: 16px;
 
   line-height: 1.8;
 }

@@ -142,6 +142,7 @@ import Urbaniaonrentintalegaon from './pages/Urbania On Rent in Talegaon Dabhade
 import OurFleets from './pages/OurFleets';
 import Packages from './pages/Packages';
 import ContactButtons from './components/ContactButtons';
+import Urbaniaonrentpcmc from './pages/Urbania On Rent in PCMC';
 
 function App() {
   return (
@@ -288,6 +289,7 @@ function App() {
 <Route path="/urbania-on-rent-in-dapodi" element={<Urbaniaonrentindapoli />} />
 <Route path="/urbania-on-rent-in-kasarwadi" element={<Urbaniaonrentinkasarwadi />} />
 <Route path="/urbania-on-rent-in-talegaon-dabhade" element={<Urbaniaonrentintalegaon />} />
+<Route path="/urbania-on-rent-in-pcmc" element={<Urbaniaonrentpcmc />} />
 
       </Routes>
 

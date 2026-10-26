@@ -1,0 +1,269 @@
+
+/* ==========================================
+   GOOGLE REVIEW SECTION
+========================================== */
+
+.sis-testimonial-section {
+  background:
+    radial-gradient(
+      circle at 95% 10%,
+      rgba(255, 115, 30, 0.07),
+      transparent 35%
+    ),
+    #fffaf7;
+}
+
+.mauli-google-rating-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 28px 35px;
+  background: #ffffff;
+  border: 1px solid #f0e6e0;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(40, 25, 25, 0.06);
+}
+
+.mauli-google-rating-left,
+.mauli-google-rating-middle,
+.mauli-google-rating-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mauli-google-brand h3 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 800;
+  color: #202124;
+}
+
+.mauli-google-brand span {
+  font-size: 13px;
+  color: #777;
+}
+
+.mauli-rating-number {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+
+.mauli-rating-number strong {
+  font-size: 52px;
+  line-height: 1;
+  font-weight: 800;
+  color: #202124;
+}
+
+.mauli-rating-number > span {
+  font-size: 18px;
+  color: #555;
+}
+
+.mauli-google-stars {
+  display: flex;
+  gap: 4px;
+  color: #ffae00;
+  font-size: 29px;
+  line-height: 1;
+}
+
+.mauli-rating-details p {
+  margin: 8px 0 0;
+  color: #666;
+  font-size: 15px;
+}
+
+.mauli-write-review-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #f76b1c;
+  color: #fff;
+  padding: 16px 27px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.mauli-write-review-btn:hover {
+  background: #720b35;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.mauli-review-g {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.mauli-review-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.mauli-nav-btn {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #720b35;
+  border: 1px solid #f5d6c4;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mauli-nav-btn:hover {
+  background: #720b35;
+  color: #fff;
+  border-color: #720b35;
+}
+
+/* ==========================================
+   TESTIMONIAL CARDS
+========================================== */
+
+.mauli-testimonial-card {
+  min-height: 345px;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid #f3e5dc;
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.mauli-testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    #720b35,
+    #ff7025,
+    #720b35
+  );
+}
+
+.mauli-testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.mauli-testimonial-card .sisf-m-star {
+  display: flex;
+  gap: 5px;
+}
+
+.mauli-testimonial-card .star {
+  color: #720b35;
+  background: #fff1e5;
+  border-radius: 6px;
+  padding: 3px 6px;
+  font-size: 19px;
+}
+
+.mauli-quote-icon {
+  font-size: 34px;
+  color: #fce9df;
+}
+
+.mauli-testimonial-card .sisf-e-discription p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #666;
+}
+
+.mauli-testimonial-card .sisf-e-author-name {
+  font-size: 17px;
+  font-weight: 800;
+  color: #720b35;
+}
+
+.mauli-testimonial-card .sisf-e-author-job {
+  font-size: 13px;
+  color: #777;
+}
+
+.testimonial-slider .swiper-slide {
+  height: auto;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 991px) {
+  .mauli-google-rating-box {
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .mauli-review-navigation {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .mauli-google-rating-box {
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 18px;
+  }
+
+  .mauli-google-rating-middle {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mauli-google-rating-left {
+    justify-content: center;
+  }
+
+  .mauli-google-brand h3 {
+    font-size: 20px;
+  }
+
+  .mauli-rating-number strong {
+    font-size: 42px;
+  }
+
+  .mauli-google-stars {
+    justify-content: center;
+    font-size: 26px;
+  }
+
+  .mauli-write-review-btn {
+    width: 100%;
+  }
+
+  .mauli-google-rating-right {
+    width: 100%;
+  }
+
+  .mauli-testimonial-card {
+    min-height: 320px;
+  }
+}

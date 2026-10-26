@@ -52,19 +52,19 @@ const Footer = () => {
 
 
     <li className="d-flex gap-3">
-              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+              <a href="https://www.instagram.com/mauliwalatravels/" target="_blank" rel="noreferrer">
                 <i className="fab fa-instagram text-white"></i>
               </a>
 
-              <a href="https://www.facebook.com/people/" target="_blank" rel="noreferrer">
+              <a href="https://www.facebook.com/profile.php?id=61596067251499" target="_blank" rel="noreferrer">
                 <i className="fab fa-facebook-f text-white"></i>
               </a>
 
-              <a href="https://x.com/" target="_blank" rel="noreferrer">
+              <a href="https://x.com/mauliwalatravel" target="_blank" rel="noreferrer">
                 <i className="fab fa-twitter text-white"></i>
               </a>
 
-               <a href="https://in.pinterest.com/" target="_blank" rel="noreferrer">
+               <a href="https://in.pinterest.com/mauliwalatravels/" target="_blank" rel="noreferrer">
                 <i className="fab fa-pinterest-p text-white"></i>
               </a>
             </li>

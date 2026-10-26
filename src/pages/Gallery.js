@@ -14,6 +14,37 @@ const Gallery = () => {
   */
 
 const galleryImages = [
+  { src: "/images/gallery/19.jpeg" },
+{ src: "/images/gallery/20.jpeg" },
+{ src: "/images/gallery/21.jpeg" },
+  { src: "/images/gallery/1.jpeg" },
+{ src: "/images/gallery/2.jpeg" },
+{ src: "/images/gallery/3.jpeg" },
+{ src: "/images/gallery/4.jpeg" },
+{ src: "/images/gallery/5.jpeg" },
+{ src: "/images/gallery/6.jpeg" },
+{ src: "/images/gallery/7.jpeg" },
+{ src: "/images/gallery/8.jpeg" },
+{ src: "/images/gallery/9.jpeg" },
+{ src: "/images/gallery/10.jpeg" },
+{ src: "/images/gallery/11.jpeg" },
+{ src: "/images/gallery/12.jpeg" },
+{ src: "/images/gallery/13.jpeg" },
+{ src: "/images/gallery/14.jpeg" },
+{ src: "/images/gallery/15.jpeg" },
+{ src: "/images/gallery/16.jpeg" },
+{ src: "/images/gallery/17.jpeg" },
+{ src: "/images/gallery/18.jpeg" },
+
+{ src: "/images/gallery/22.jpeg" },
+{ src: "/images/gallery/23.jpeg" },
+{ src: "/images/gallery/24.jpeg" },
+{ src: "/images/gallery/25.jpeg" },
+{ src: "/images/gallery/26.jpeg" },
+{ src: "/images/gallery/27.jpeg" },
+{ src: "/images/gallery/28.jpeg" },
+{ src: "/images/gallery/29.jpeg" },
+{ src: "/images/gallery/30.jpeg" },
   {
     src: "/images/Fleet/10-Seater-urbania.jpg",
     title: "10-Seater-urbania",
@@ -44,16 +75,16 @@ const galleryImages = [
     title: "32-Seater-Bus",
     category: "Bus",
   },
-  {
-    src: "/images/Fleet/40-Seater-Bus.jpg",
-    title: "40-Seater-Bus",
-    category: "Bus",
-  },
-  {
-    src: "/images/Fleet/45-Seater-AC-Bus.jpg",
-    title: "45-Seater-AC-Bus",
-    category: "Bus",
-  },
+  // {
+  //   src: "/images/Fleet/40-Seater-Bus.jpg",
+  //   title: "40-Seater-Bus",
+  //   category: "Bus",
+  // },
+  // {
+  //   src: "/images/Fleet/45-Seater-AC-Bus.jpg",
+  //   title: "45-Seater-AC-Bus",
+  //   category: "Bus",
+  // },
 ];
 
 

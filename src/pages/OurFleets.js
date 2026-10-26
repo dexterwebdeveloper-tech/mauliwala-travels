@@ -477,6 +477,58 @@ const OurFleets = () => {
             </article>
           </div>
 
+
+{/* 50 SEATER BUS */}
+<div className="col-12 col-md-6 col-xl-4">
+  <article className="mf-fleet-card mf-red">
+
+    <div className="mf-fleet-image">
+      <img
+        src="/images/Fleet/50-Seater-AC-Bus.jpeg"
+        alt="50 Seater Bus Rental in Pune"
+        loading="lazy"
+      />
+
+      <span className="mf-category">
+        Bus
+      </span>
+
+      <span className="mf-seat-badge">
+        <i className="fa-solid fa-user-group"></i>
+        50 Seater
+      </span>
+    </div>
+
+    <div className="mf-fleet-body">
+
+      <div className="mf-fleet-number">
+        09
+      </div>
+
+      <h3>50 Seater Bus</h3>
+
+      <p>
+        A spacious bus for large group travel, corporate outings,
+        school and college trips, weddings, events, sightseeing
+        and comfortable outstation journeys from Pune.
+      </p>
+
+      <div className="mf-feature-row">
+        <span>
+          <i className="fa-solid fa-users"></i>
+          Large Groups
+        </span>
+
+        <span>
+          <i className="fa-solid fa-route"></i>
+          Outstation
+        </span>
+      </div>
+
+    </div>
+  </article>
+</div>
+
         </div>
       </div>
     </section>

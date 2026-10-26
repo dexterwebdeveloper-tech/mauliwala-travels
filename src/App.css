@@ -1580,7 +1580,7 @@
 
   color: #686970;
 
-  font-size: 13px;
+  font-size: 15px;
 
   line-height: 1.7;
 }
@@ -2153,7 +2153,7 @@
 
   color: #626269;
 
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
 
   line-height: 1.75;
@@ -3102,7 +3102,7 @@
 
 #why-choose-section
 .bento-card::before {
-  content: "WHY MAULIWALA";
+  content: "WHY MAULIWALA TRAVELS";
 
   position: relative;
   z-index: 3;
@@ -3120,7 +3120,7 @@
   background:
     rgba(227, 30, 36, 0.09);
 
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 900;
 
   letter-spacing: 1.2px;
@@ -3222,7 +3222,7 @@ h4::after {
 
   color: #66676d;
 
-  font-size: 12.5px;
+  font-size: 15px;
 
   line-height: 1.75;
 }
@@ -3855,7 +3855,7 @@ h4::after {
   background:
     rgba(20, 20, 22, 0.045);
 
-  font-size: 12.5px;
+  font-size: 14px;
 
   line-height: 1.8;
 }
@@ -6738,4 +6738,75 @@ ul{
     padding: 25px 20px;
   }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BOTTOM CONTACT DETAILS */
+
+.mauliContactBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 18px 15px;
+  background: #ffffff;
+  border: 1px solid rgba(227, 30, 36, 0.15);
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(20, 20, 25, 0.06);
+  color: #303034;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.mauliContactBottom > i {
+  color: #e31e24;
+}
+
+.mauliContactBottom a {
+  color: #e31e24;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.mauliContactBottom a:hover {
+  color: #b80d15;
+}
+
+.mauliContactBottom .mauliContactWhatsApp {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 15px;
+  border-radius: 9px;
+  background: #25D366;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.mauliContactBottom .mauliContactWhatsApp:hover {
+  background: #128C7E;
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .mauliContactBottom {
+    gap: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
 }

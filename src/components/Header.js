@@ -62,7 +62,7 @@ const Header = () => {
 
                   <li className="d-flex gap-3">
                     <a
-                      href="https://www.instagram.com/"
+                      href="https://www.instagram.com/mauliwalatravels/"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -70,7 +70,7 @@ const Header = () => {
                     </a>
 
                     <a
-                      href="https://www.facebook.com/people"
+                      href="https://www.facebook.com/profile.php?id=61596067251499"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -78,7 +78,7 @@ const Header = () => {
                     </a>
 
                     <a
-                      href="https://x.com/"
+                      href="https://x.com/mauliwalatravel"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -86,7 +86,7 @@ const Header = () => {
                     </a>
 
                     <a
-                      href="https://in.pinterest.com/"
+                      href="https://in.pinterest.com/mauliwalatravels/"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -194,6 +194,7 @@ const Header = () => {
     <NavDropdown title="Urbania On Rent" id="contact-dropdown" className='fw-bold'>
                   
                   <NavDropdown.Item href="/17-seater-urbania-on-rent-in-pune" className='fw-bold'>Urbania on Rent in pune</NavDropdown.Item>
+                  <NavDropdown.Item href="/urbania-on-rent-in-pimpri-chinchwad" className='fw-bold'>Urbania On Rent in PCMC</NavDropdown.Item>
                   <NavDropdown.Item href="/urbania-on-rent-in-mumbai" className='fw-bold nav-item'>Urbania On Rent in Mumbai</NavDropdown.Item>
                 </NavDropdown>
 

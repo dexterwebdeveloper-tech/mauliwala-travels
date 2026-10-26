@@ -1,58 +1,201 @@
+
 import React, { useState } from "react";
 import "./Enquiry.css";
 
-const Enquiry = () => {
-  const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState("");
+const WEB3FORMS_ACCESS_KEY =
+  "e8e07040-bf64-4a17-b066-746b2a624cf9";
 
+const initialFormData = {
+  fullname: "",
+  email: "",
+  phone: "",
+  vehicle: "",
+  pickup: "",
+  drop: "",
+  triptype: "Outstation Trip",
+  date: "",
+  time: "",
+  passengers: "1-4",
+  message: "",
+};
+
+const vehicleGroups = [
+  {
+    label: "Force Urbania",
+    vehicles: [
+      "10 Seater Force Urbania",
+      "12 Seater Force Urbania",
+      "13 Seater Force Urbania",
+      "16 Seater Force Urbania",
+      "17 Seater Force Urbania",
+    ],
+  },
+  {
+    label: "Tempo Traveller",
+    vehicles: [
+      "9 Seater Tempo Traveller",
+      "12 Seater Tempo Traveller",
+      "13 Seater Tempo Traveller",
+      "15 Seater Tempo Traveller",
+      "17 Seater Tempo Traveller",
+      "20 Seater Tempo Traveller",
+      "26 Seater Tempo Traveller",
+    ],
+  },
+  {
+    label: "Mini Bus",
+    vehicles: [
+      "20 Seater Mini Bus",
+      "25 Seater Mini Bus",
+      "27 Seater Mini Bus",
+      "30 Seater Mini Bus",
+      "32 Seater Mini Bus",
+      "35 Seater Mini Bus",
+    ],
+  },
+  {
+    label: "Bus",
+    vehicles: [
+      "40 Seater Bus",
+      "45 Seater Bus",
+      "50 Seater Bus",
+    ],
+  },
+];
+
+const tripTypes = [
+  "Outstation Trip",
+  "One Way Trip",
+  "Round Trip",
+  "Pune Local",
+  "Airport Transfer",
+  "Family Tour",
+  "Group Tour",
+  "Corporate Travel",
+  "Wedding Travel",
+  "School / College Trip",
+  "Picnic",
+  "Pilgrimage / Darshan",
+];
+
+const passengerOptions = [
+  "1-4",
+  "5-9",
+  "10-13",
+  "14-17",
+  "18-20",
+  "21-25",
+  "26-30",
+  "31-35",
+  "36-40",
+  "41-50",
+  "50+",
+];
+
+const getTodayLocal = () => {
+  const now = new Date();
+
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+
+  return `${year}-${month}-${day}`;
+};
+
+const Enquiry = () => {
   const [formData, setFormData] = useState({
-    fullname: "",
-    email: "",
-    phone: "",
-    vehicle: "",
-    pickup: "",
-    drop: "",
-    triptype: "Outstation Trip",
-    date: "",
-    time: "",
-    passengers: "1-4",
-    message: "",
+    ...initialFormData,
   });
 
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    if (status) {
+      setStatus("");
+      setErrorMessage("");
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (loading) return;
+
+    const phone = formData.phone.replace(/\D/g, "");
+
+    if (!/^[6-9]\d{9}$/.test(phone)) {
+      setStatus("error");
+      setErrorMessage(
+        "Please enter a valid 10-digit Indian mobile number."
+      );
+      return;
+    }
+
+    if (formData.date < getTodayLocal()) {
+      setStatus("error");
+      setErrorMessage(
+        "Please select today or a future travel date."
+      );
+      return;
+    }
+
     setLoading(true);
     setStatus("");
+    setErrorMessage("");
 
     const data = new FormData();
 
+    // Web3Forms Access Key
     data.append(
       "access_key",
-      "9752018f-9d16-424a-b577-bf1ff3c564af"
+      WEB3FORMS_ACCESS_KEY
     );
 
+    // Email Subject
     data.append(
       "subject",
-      "New Mauliwala Travels Urbania & Mini Bus Enquiry"
+      `New Mauliwala Travels Enquiry - ${formData.vehicle}`
     );
 
+    // Sender Name
     data.append(
       "from_name",
       "Mauliwala Travels Website"
     );
 
-    // Send all form fields
-    Object.keys(formData).forEach((key) => {
-      data.append(key, formData[key]);
-    });
+    // Customer Details
+    data.append("Full Name", formData.fullname.trim());
+    data.append("Email", formData.email.trim());
+    data.append("Phone", `+91 ${phone}`);
+
+    // Booking Details
+    data.append("Vehicle", formData.vehicle);
+    data.append("Pickup Location", formData.pickup.trim());
+    data.append("Drop Location", formData.drop.trim());
+    data.append("Trip Type", formData.triptype);
+    data.append("Travel Date", formData.date);
+    data.append("Travel Time", formData.time || "Not specified");
+    data.append("Passengers", formData.passengers);
+
+    // Additional Information
+    data.append(
+      "Customer Message",
+      formData.message.trim() || "No additional message"
+    );
+
+    data.append(
+      "Enquiry Source",
+      "Mauliwala Travels Website"
+    );
 
     try {
       const response = await fetch(
@@ -65,34 +208,31 @@ const Enquiry = () => {
 
       const result = await response.json();
 
-      console.log(result);
-
-      if (result.success) {
+      if (response.ok && result.success) {
         setStatus("success");
 
         setFormData({
-          fullname: "",
-          email: "",
-          phone: "",
-          vehicle: "",
-          pickup: "",
-          drop: "",
-          triptype: "Outstation Trip",
-          date: "",
-          time: "",
-          passengers: "1-4",
-          message: "",
+          ...initialFormData,
         });
       } else {
-        console.log(result);
         setStatus("error");
-      }
-    } catch (err) {
-      console.error(err);
-      setStatus("error");
-    }
 
-    setLoading(false);
+        setErrorMessage(
+          result.message ||
+            "Unable to submit your enquiry. Please try again."
+        );
+      }
+    } catch (error) {
+      console.error("Web3Forms Error:", error);
+
+      setStatus("error");
+
+      setErrorMessage(
+        "Network error. Please check your internet connection and try again."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -130,13 +270,11 @@ const Enquiry = () => {
         <div className="container">
           <div className="enquiry-box">
 
-            {/* =================================
-                HEADER
-            ================================= */}
+            {/* HEADER */}
 
             <div className="text-center mb-5">
               <span className="small-title text-white">
-                MAULIWALA
+                MAULIWALA TRAVELS
               </span>
 
               <h2 className="text-white">
@@ -144,16 +282,16 @@ const Enquiry = () => {
               </h2>
 
               <p className="text-white">
-                Planning a family tour, corporate trip, wedding,
-                group picnic or outstation journey from Pune?
-                Share your travel details and get the right Urbania,
-                Tempo Traveller or Mini Bus option for your group.
+                Planning a family tour, corporate trip,
+                wedding, group picnic or outstation
+                journey from Pune? Share your travel
+                details and get the right Urbania,
+                Tempo Traveller or Mini Bus option
+                for your group.
               </p>
             </div>
 
-            {/* =================================
-                FORM
-            ================================= */}
+            {/* FORM */}
 
             <form onSubmit={handleSubmit}>
               <div className="row">
@@ -164,10 +302,12 @@ const Enquiry = () => {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Full Name"
+                    placeholder="Full Name *"
                     name="fullname"
                     value={formData.fullname}
                     onChange={handleChange}
+                    autoComplete="name"
+                    maxLength={100}
                     required
                   />
                 </div>
@@ -178,10 +318,11 @@ const Enquiry = () => {
                   <input
                     type="email"
                     className="form-control"
-                    placeholder="Email Address"
+                    placeholder="Email Address *"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    autoComplete="email"
                     required
                   />
                 </div>
@@ -192,10 +333,15 @@ const Enquiry = () => {
                   <input
                     type="tel"
                     className="form-control"
-                    placeholder="Mobile Number"
+                    placeholder="10-Digit Mobile Number *"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
+                    inputMode="numeric"
+                    pattern="[6-9][0-9]{9}"
+                    title="Enter a valid 10-digit Indian mobile number"
+                    maxLength={10}
+                    autoComplete="tel-national"
                     required
                   />
                 </div>
@@ -211,108 +357,24 @@ const Enquiry = () => {
                     required
                   >
                     <option value="">
-                      Select Vehicle / Seating Capacity
+                      Select Vehicle / Seating Capacity *
                     </option>
 
-                    {/* FORCE URBANIA */}
-
-                    <optgroup label="Force Urbania">
-                      <option value="10 Seater Force Urbania">
-                        10 Seater Force Urbania
-                      </option>
-
-                      <option value="12 Seater Force Urbania">
-                        12 Seater Force Urbania
-                      </option>
-
-                      <option value="13 Seater Force Urbania">
-                        13 Seater Force Urbania
-                      </option>
-
-                      <option value="16 Seater Force Urbania">
-                        16 Seater Force Urbania
-                      </option>
-
-                      <option value="17 Seater Force Urbania">
-                        17 Seater Force Urbania
-                      </option>
-                    </optgroup>
-
-                    {/* TEMPO TRAVELLER */}
-
-                    <optgroup label="Tempo Traveller">
-                      <option value="9 Seater Tempo Traveller">
-                        9 Seater Tempo Traveller
-                      </option>
-
-                      <option value="12 Seater Tempo Traveller">
-                        12 Seater Tempo Traveller
-                      </option>
-
-                      <option value="13 Seater Tempo Traveller">
-                        13 Seater Tempo Traveller
-                      </option>
-
-                      <option value="15 Seater Tempo Traveller">
-                        15 Seater Tempo Traveller
-                      </option>
-
-                      <option value="17 Seater Tempo Traveller">
-                        17 Seater Tempo Traveller
-                      </option>
-
-                      <option value="20 Seater Tempo Traveller">
-                        20 Seater Tempo Traveller
-                      </option>
-
-                      <option value="26 Seater Tempo Traveller">
-                        26 Seater Tempo Traveller
-                      </option>
-                    </optgroup>
-
-                    {/* MINI BUS */}
-
-                    <optgroup label="Mini Bus">
-                      <option value="20 Seater Mini Bus">
-                        20 Seater Mini Bus
-                      </option>
-
-                      <option value="25 Seater Mini Bus">
-                        25 Seater Mini Bus
-                      </option>
-
-                      <option value="27 Seater Mini Bus">
-                        27 Seater Mini Bus
-                      </option>
-
-                      <option value="30 Seater Mini Bus">
-                        30 Seater Mini Bus
-                      </option>
-
-                      <option value="32 Seater Mini Bus">
-                        32 Seater Mini Bus
-                      </option>
-
-                      <option value="35 Seater Mini Bus">
-                        35 Seater Mini Bus
-                      </option>
-                    </optgroup>
-
-                    {/* LARGE BUS */}
-
-                    <optgroup label="Bus">
-                      <option value="40 Seater Bus">
-                        40 Seater Bus
-                      </option>
-
-                      <option value="45 Seater Bus">
-                        45 Seater Bus
-                      </option>
-
-                      <option value="50 Seater Bus">
-                        50 Seater Bus
-                      </option>
-                    </optgroup>
+                    {vehicleGroups.map((group) => (
+                      <optgroup
+                        key={group.label}
+                        label={group.label}
+                      >
+                        {group.vehicles.map((vehicle) => (
+                          <option
+                            key={vehicle}
+                            value={vehicle}
+                          >
+                            {vehicle}
+                          </option>
+                        ))}
+                      </optgroup>
+                    ))}
                   </select>
                 </div>
 
@@ -322,7 +384,7 @@ const Enquiry = () => {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Pickup Location in Pune / Maharashtra"
+                    placeholder="Pickup Location in Pune / Maharashtra *"
                     name="pickup"
                     value={formData.pickup}
                     onChange={handleChange}
@@ -336,7 +398,7 @@ const Enquiry = () => {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Destination / Drop Location"
+                    placeholder="Destination / Drop Location *"
                     name="drop"
                     value={formData.drop}
                     onChange={handleChange}
@@ -353,53 +415,11 @@ const Enquiry = () => {
                     value={formData.triptype}
                     onChange={handleChange}
                   >
-                    <option value="Outstation Trip">
-                      Outstation Trip
-                    </option>
-
-                    <option value="One Way Trip">
-                      One Way Trip
-                    </option>
-
-                    <option value="Round Trip">
-                      Round Trip
-                    </option>
-
-                    <option value="Pune Local">
-                      Pune Local
-                    </option>
-
-                    <option value="Airport Transfer">
-                      Airport Transfer
-                    </option>
-
-                    <option value="Family Tour">
-                      Family Tour
-                    </option>
-
-                    <option value="Group Tour">
-                      Group Tour
-                    </option>
-
-                    <option value="Corporate Travel">
-                      Corporate Travel
-                    </option>
-
-                    <option value="Wedding Travel">
-                      Wedding Travel
-                    </option>
-
-                    <option value="School / College Trip">
-                      School / College Trip
-                    </option>
-
-                    <option value="Picnic">
-                      Picnic
-                    </option>
-
-                    <option value="Pilgrimage / Darshan">
-                      Pilgrimage / Darshan
-                    </option>
+                    {tripTypes.map((type) => (
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
+                    ))}
                   </select>
                 </div>
 
@@ -412,49 +432,16 @@ const Enquiry = () => {
                     value={formData.passengers}
                     onChange={handleChange}
                   >
-                    <option value="1-4">
-                      1 - 4 Passengers
-                    </option>
-
-                    <option value="5-9">
-                      5 - 9 Passengers
-                    </option>
-
-                    <option value="10-13">
-                      10 - 13 Passengers
-                    </option>
-
-                    <option value="14-17">
-                      14 - 17 Passengers
-                    </option>
-
-                    <option value="18-20">
-                      18 - 20 Passengers
-                    </option>
-
-                    <option value="21-25">
-                      21 - 25 Passengers
-                    </option>
-
-                    <option value="26-30">
-                      26 - 30 Passengers
-                    </option>
-
-                    <option value="31-35">
-                      31 - 35 Passengers
-                    </option>
-
-                    <option value="36-40">
-                      36 - 40 Passengers
-                    </option>
-
-                    <option value="41-50">
-                      41 - 50 Passengers
-                    </option>
-
-                    <option value="50+">
-                      50+ Passengers
-                    </option>
+                    {passengerOptions.map((option) => (
+                      <option
+                        key={option}
+                        value={option}
+                      >
+                        {option === "50+"
+                          ? "50+ Passengers"
+                          : `${option.replace("-", " - ")} Passengers`}
+                      </option>
+                    ))}
                   </select>
                 </div>
 
@@ -467,7 +454,7 @@ const Enquiry = () => {
                     name="date"
                     value={formData.date}
                     onChange={handleChange}
-                    min={new Date().toISOString().split("T")[0]}
+                    min={getTodayLocal()}
                     required
                   />
                 </div>
@@ -490,14 +477,15 @@ const Enquiry = () => {
                   <textarea
                     rows="5"
                     className="form-control"
-                    placeholder="Tell us about your trip, destination, number of days, required vehicle, group size or any special travel requirements"
+                    placeholder="Tell us about your trip, destination, number of days, group size or special travel requirements"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                  ></textarea>
+                    maxLength={2000}
+                  />
                 </div>
 
-                {/* SUBMIT */}
+                {/* SUBMIT BUTTON */}
 
                 <div className="col-12 text-center">
                   <button
@@ -507,39 +495,53 @@ const Enquiry = () => {
                   >
                     {loading ? (
                       <>
-                        <span className="spinner-border spinner-border-sm me-2"></span>
+                        <span
+                          className="spinner-border spinner-border-sm me-2"
+                          role="status"
+                          aria-hidden="true"
+                        />
                         Sending Enquiry...
                       </>
                     ) : (
                       <>
-                        <i className="fas fa-paper-plane me-2"></i>
+                        <i className="fas fa-paper-plane me-2" />
                         Get Best Travel Quote
                       </>
                     )}
                   </button>
                 </div>
 
-                {/* STATUS */}
+                {/* STATUS MESSAGE */}
 
-                <div className="col-12 mt-4 text-center">
+                <div
+                  className="col-12 mt-4 text-center"
+                  aria-live="polite"
+                >
                   {status === "success" && (
-                    <div className="alert alert-success rounded-4">
-                      <i className="fas fa-check-circle me-2"></i>
+                    <div
+                      className="alert alert-success rounded-4"
+                      role="status"
+                    >
+                      <i className="fas fa-check-circle me-2" />
 
-                      Thank you! Your Mauliwala Travels enquiry has
-                      been submitted successfully. Our team will
-                      contact you shortly with the suitable vehicle
-                      option and travel quote.
+                      Thank you! Your Mauliwala Travels
+                      enquiry has been submitted
+                      successfully.
+
+                      Our team will contact you shortly
+                      with a suitable vehicle option
+                      and travel quote.
                     </div>
                   )}
 
                   {status === "error" && (
-                    <div className="alert alert-danger rounded-4">
-                      <i className="fas fa-times-circle me-2"></i>
+                    <div
+                      className="alert alert-danger rounded-4"
+                      role="alert"
+                    >
+                      <i className="fas fa-times-circle me-2" />
 
-                      Something went wrong. Please try again or
-                      contact Mauliwala Travels directly for your
-                      Urbania, Tempo Traveller or Mini Bus booking.
+                      {errorMessage}
                     </div>
                   )}
                 </div>

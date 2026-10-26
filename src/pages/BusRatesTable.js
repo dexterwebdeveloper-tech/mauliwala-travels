@@ -841,7 +841,7 @@ const BusRatesTable = () => {
 
   color: #6c6c72;
 
-  font-size: 13px;
+  font-size: 15px;
 
   line-height: 1.75;
 }
@@ -922,7 +922,7 @@ const BusRatesTable = () => {
 
   color: #ababaf;
 
-  font-size: 8px;
+  font-size: 14px;
 }
 
 
@@ -1014,7 +1014,7 @@ const BusRatesTable = () => {
 
   color: #ffffff;
 
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 900;
 
   letter-spacing: 0.7px;
@@ -1281,7 +1281,7 @@ const BusRatesTable = () => {
 
   color: #55555b;
 
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
 
   white-space: nowrap;
@@ -1424,7 +1424,7 @@ const BusRatesTable = () => {
     1px solid
     rgba(227, 30, 36, 0.08);
 
-  font-size: 9px;
+  font-size: 14px;
 
   line-height: 1.6;
 }
@@ -1775,7 +1775,7 @@ const BusRatesTable = () => {
 
           {/* ================= RATE NOTE ================= */}
 
-          <div className="mauliRateNote">
+          {/* <div className="mauliRateNote">
 
             <i className="fa-solid fa-circle-info"></i>
 
@@ -1786,7 +1786,41 @@ const BusRatesTable = () => {
               charges. Contact Mauliwala for the current quotation.
             </span>
 
-          </div>
+          </div> */}
+
+          
+{/* ================= RATE NOTE & CONTACT ================= */}
+
+<div className="mauliRateNote">
+  <i className="fa-solid fa-circle-info"></i>
+
+  <span>
+    Rental charges may vary depending on travel date,
+    pickup and drop location, trip duration, route,
+    vehicle requirement and other applicable trip
+    charges. Contact Mauliwala for the current quotation.
+  </span>
+</div>
+
+<div className="mauliContactBottom">
+  <i className="fa-solid fa-phone"></i>
+  <span>For Booking & Enquiries:</span>
+
+  <a href="tel:+919049419494">
+    +91 9049419494
+  </a>
+
+  <a
+    href="https://wa.me/919049419494"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mauliContactWhatsApp"
+  >
+    <i className="fa-brands fa-whatsapp"></i>
+    WhatsApp Us
+  </a>
+</div>
+
 
         </div>
 
