@@ -92,6 +92,17 @@ const Header = () => {
                     >
                       <i className="fab fa-pinterest-p text-white"></i>
                     </a>
+
+                    
+<a
+  href="https://youtu.be/-rl5so-kyww"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="YouTube"
+>
+  <i className="fab fa-youtube text-white"></i>
+</a>
+
                   </li>
                 </ul>
               </div>

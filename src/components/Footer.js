@@ -43,8 +43,11 @@ const Footer = () => {
 
       
     </div>
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5757.9817211650125!2d73.8899227!3d18.6820154!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c9001b8c003b%3A0xb16b90e74a55080e!2z4KSV4KWD4KSq4KS-4KSV4KWB4KSC4KScICjgpIngpK7gpYfgpLYg4KSu4KS54KS-4KSw4KS-4KScIOCkpuCktuCksOCkpeClhyk!5e1!3m2!1sen!2sin!4v1789301541475!5m2!1sen!2sin" width="100%"
-            height="250" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.5984007495836!2d73.8899215!3d18.682009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fdf0faef3206afb%3A0x5e9e19405a8309b0!2sMauliwala%20Travels!5e0!3m2!1sen!2sin!4v1792982590679!5m2!1sen!2sin" width="100%" height="250" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+
   
       
 
@@ -67,6 +70,16 @@ const Footer = () => {
                <a href="https://in.pinterest.com/mauliwalatravels/" target="_blank" rel="noreferrer">
                 <i className="fab fa-pinterest-p text-white"></i>
               </a>
+              
+<a
+  href="https://youtu.be/-rl5so-kyww"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="YouTube"
+>
+  <i className="fab fa-youtube text-white"></i>
+</a>
+
             </li>
   </div>
 </div>
